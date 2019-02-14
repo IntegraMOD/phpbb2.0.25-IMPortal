@@ -1,0 +1,502 @@
+/*
+  The original subSilver Theme for phpBB version 2+
+  Created by subBlue design
+  http://www.subBlue.com
+*/
+
+
+html{
+	font-size:100%;
+	margin-bottom:1px;
+}
+
+body{
+	font-family:Verdana,Helvetica,Arial,sans-serif;
+	font-size:13px;
+	background-color: #E5E5E5;
+}
+
+html,body{
+	color:#000000;
+	background-color:#E5E5E5;
+}
+
+
+/* General font families for common tags */
+font,th,td,p { font-family: Verdana, Arial, Helvetica, sans-serif }
+a:link,a:active,a:visited { color : #006699; }
+a:hover		{ text-decoration: underline; color : #DD6900; }
+.hov		{ text-decoration: none; color : #DD6900; }
+hr		    {border-top:1px solid #EFF1F3;}
+
+
+/* This is the border line & background colour round the entire page */
+.bodyline	{ background-color: #FFFFFF; border: 1px #98AAB1 solid; }
+
+/* This is the outline round the main forum tables */
+.forumline	{ background-color: #FFFFFF; border: 2px #006699 solid; }
+
+
+/* Main table cell colours and backgrounds */
+.row1	{ background-color: #EFEFEF; }
+.row2	{ background-color: #DEE3E7; }
+.row3	{ background-color: #D1D7DC; }
+
+
+/*
+  This is for the table cell above the Topics, Post & Last posts on the index.php page
+  By default this is the fading out gradiated silver background.
+  However, you could replace this with a bitmap specific for each forum
+*/
+.rowpic {
+		background-color: #FFFFFF;
+		background-image: url(../images/cellpic2.jpg);
+		background-repeat: repeat-y;
+}
+
+/* Header cells - the blue and silver gradient backgrounds */
+th, .th	{
+	color: #FFA34F; font-size: 0.846em; font-weight : bold;
+	background-color: #006699; height: 25px;
+	background-image: url(../images/cellpic3.gif);
+}
+
+.cat, .catHead, .cathead, .catSides, .catLeft, .catRight, .catBottom {
+			background-image: url(../images/cellpic1.gif);
+			background-color:#D1D7DC; border: #FFFFFF; border-style: solid; height: 28px;
+}
+ 
+.bdr {border: 1px solid black !important;}
+
+/*
+  Setting additional nice inner borders for the main table cells.
+  The names indicate which sides the border will be on.
+  Don't worry if you don't understand this, just ignore it :-)
+*/
+.cat, .catHead, .catBottom {
+	height: 29px;
+	border-width: 0px 0px 0px 0px;
+}
+.thHead,.thSides,.thTop,.thLeft,.thRight,.thBottom,.thCornerL,.thCornerR {
+	font-weight: bold; border: #FFFFFF; border-style: solid; height: 28px; }
+.thH {line-height: 2em; vertical-align:middle !important;}
+.row3Right, .spaceRow {
+	background-color: #D1D7DC; border: #FFFFFF; border-style: solid; }
+
+.thHead,.catHead { font-size: 0.923em; border-width: 1px 1px 0px 1px; }
+.thSides,.catSides,.spaceRow	 { border-width: 0px 1px 0px 1px; }
+.thRight,.catRight,.row3Right	 { border-width: 0px 1px 0px 0px; }
+.thLeft,.catLeft	  { border-width: 0px 0px 0px 1px; }
+.thBottom,.catBottom  { border-width: 0px 1px 1px 1px; }
+.thTop	 { border-width: 1px 0px 0px 0px; }
+.thCornerL { border-width: 1px 0px 0px 1px; }
+.thCornerR { border-width: 1px 1px 0px 0px; }
+
+
+
+/* The largest text used in the index page title and toptic title etc. */
+.maintitle,h1,h2	{
+			font-weight: bold; font-size: 1.692em; font-family: "Trebuchet MS",Verdana, Arial, Helvetica, sans-serif;
+			text-decoration: none; line-height : 120%; color : #000000;
+}
+
+
+/* General text */
+.gen { font-size : 1em !important; }
+.genmed { font-size : 0.923em !important; }
+.gensmall { font-size : 0.846em !important; }
+.gen,.genmed,.gensmall { color : #000000; }
+a.gen,a.genmed,a.gensmall { color: #006699; text-decoration: none; }
+a.gen:hover,a.genmed:hover,a.gensmall:hover	{ color: #DD6900; text-decoration: underline; }
+.qb a, .qb a:hover, .qb a:focus {text-decoration: none !important; margin: 0 2px;}
+
+/* The register, login, search etc links at the top of the page */
+.mainmenu	{ font-size : 1em; color : #000000;}
+a.mainmenu		{ text-decoration: none; color : #006699;  }
+a.mainmenu:hover{ text-decoration: underline; color : #DD6900; }
+
+/* Forum category titles */
+.cattitle		{ font-weight: bold; font-size: 1em ; letter-spacing: 1px; color : #006699}
+a.cattitle		{ text-decoration: none; color : #006699; }
+a.cattitle:hover{ text-decoration: underline; }
+
+
+/* Forum title: Text and link to the forums used in: index.php */
+.forumlink		{ font-weight: bold; font-size: 0.923em; color : #006699; }
+a.forumlink 	{ text-decoration: none; color : #006699; }
+a.forumlink:hover{ text-decoration: underline; color : #DD6900; }
+
+
+/* Used for the navigation text, (Page 1,2,3 etc) and the navigation bar when in a forum */
+.nav			{ font-weight: bold; font-size: 1em; color : #000000;}
+a.nav			{ text-decoration: none; color : #006699; }
+a.nav:hover		{ text-decoration: underline; }
+
+
+/* titles for the topics: could specify viewed link colour too */
+.topictitle			{ font-weight: bold; font-size: 0.923em; color : #000000; }
+a.topictitle:link   { text-decoration: none; color : #006699; }
+a.topictitle:visited { text-decoration: none; color : #5493B4; }
+a.topictitle:hover	{ text-decoration: underline; color : #DD6900; }
+
+
+/* Name of poster in viewmsg.php and viewtopic.php and other places */
+.name			{ font-size : 0.846em; color : #000000;}
+
+/* Location, number of posts, post date etc */
+.postdetails		{ font-size : 0.769em; color : #000000; }
+
+
+/* The content of the posts (body of text) */
+.postbody { font-size : 0.923em;}
+a.postlink:link	{ text-decoration: none; color : #006699 }
+a.postlink:visited { text-decoration: none; color : #5493B4; }
+a.postlink:hover { text-decoration: underline; color : #DD6900}
+
+.postbtn, .genbtn {
+	background: #FFFFFF;
+	background-image: -webkit-linear-gradient(top, #FFFFFF, #BDCBD6);
+	background-image: -moz-linear-gradient(top, #FFFFFF, #BDCBD6);
+	background-image: -ms-linear-gradient(top, #FFFFFF, #BDCBD6);
+	background-image: -o-linear-gradient(top, #FFFFFF, #BDCBD6);
+	background-image: linear-gradient(to bottom, #FFFFFF, #BDCBD6);
+	border: solid #006699 1px;
+}
+
+.postbtn:hover, .genbtn:hover {
+	background: #E1E8EF;
+	background-image: -webkit-linear-gradient(top, #E1E8EF, #BDCBD6);
+	background-image: -moz-linear-gradient(top, #E1E8EF, #BDCBD6);
+	background-image: -ms-linear-gradient(top, #E1E8EF, #BDCBD6);
+	background-image: -o-linear-gradient(top, #E1E8EF, #BDCBD6);
+	background-image: linear-gradient(to bottom, #E1E8EF, #BDCBD6);
+}
+
+a.postbtn, .genbtn li, .genbtn a {color:#006699;}
+ a.postbtn:hover, .genbtn li:hover, .genbtn a:hover {color:#DD6900;}
+
+.genbtn {
+	-webkit-border-radius: 25;
+	-moz-border-radius: 25;
+	border-radius: 25px;
+	font-size: 11px;
+	font-weight:600;
+	padding: 3px 5px 5px 8px;
+	text-decoration: none;
+	text-transform: lowercase;
+	margin-left:2px;
+}
+.postbtn {
+	-webkit-border-radius: 25;
+	-moz-border-radius: 25;
+	border-radius: 25px;
+	font-size: 11px;
+	font-weight:600;
+	padding: 3px 10px 5px 10px;
+	text-decoration: none;
+	text-transform: lowercase;
+	letter-spacing: -.9px;
+	margin:2px;
+}
+.postbtnsml {
+	-webkit-border-radius: 20;
+	-moz-border-radius: 20;
+	border-radius: 20px;
+	font-size: .9em;
+	font-weight:600;
+	padding: 2px 12px 4px 12px;
+	text-decoration: none;
+	text-transform: lowercase;
+	letter-spacing: -.9px;
+}
+.postbtn:hover, .postbtnsml:hover .genbtn:hover{text-decoration: none;}
+
+/* Quote & Code blocks */
+.code {
+	font-family: Courier, 'Courier New', sans-serif; font-size: 0.846em !important; color: #006600 !important; background-color: #FAFAFA !important; border:1px solid #D1D7DC !important;
+}
+
+.quote {
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 0.846em !important; color: #444444 !important; line-height: 125% !important; background-color: #FAFAFA !important; border:1px solid #D1D7DC !important;
+}
+
+/* Copyright and bottom info */
+.copyright		{ font-size: 0.769em; font-family: Verdana, Arial, Helvetica, sans-serif; color: #444444; letter-spacing: -1px;}
+a.copyright		{ color: #444444; text-decoration: none;}
+a.copyright:hover { color: #000000; text-decoration: underline;}
+
+
+/* Form elements */
+input,textarea, select {
+	color : #000000;
+	font: normal 0.846em Verdana, Arial, Helvetica, sans-serif;
+	border-color : #000000;
+}
+
+/* The text input fields background colour */
+input.post, textarea.post, select {
+	background-color : #FFFFFF;
+}
+
+input { text-indent : 2px; }
+
+/* The buttons used for bbCode styling in message post */
+input.button {
+	background-color : #EFEFEF;
+	color : #000000;
+	font-size: 0.846em; font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* The main submit button option */
+input.mainoption {
+	background-color : #FAFAFA;
+	font-weight : bold;
+}
+
+/* None-bold submit button */
+input.liteoption {
+	background-color : #FAFAFA;
+	font-weight : normal;
+}
+
+/* This is the line in the posting page which shows the rollover
+  help line. This is actually a text box, but if set to be the same
+  colour as the background no one will know ;)
+*/
+.helpline { background-color: #DEE3E7; border-style: none; }
+
+/* marquee scroll (e.g.,portal recent topics) */
+.marquee-container {
+    height: 8em;
+    margin: 1em auto;
+    overflow: hidden;
+    background: white;
+    position: relative;
+    box-sizing: border-box;
+}
+.marquee {
+  top: 6em;
+  position: relative;
+  box-sizing: border-box;
+  animation: marquee 15s linear infinite;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0%   { top:   8em }
+  100% { top: -11em }
+}
+/* end marquee scroll */
+
+/* Clock Block css */
+#clock {
+  width: 30em;
+  height: 30em;
+  border-radius: 50%;
+  border: solid 2px #BECDE0;
+  margin: auto auto;
+  position: relative;
+  background-color:#E1E8F1;
+}
+#clock div,
+.faceBox {
+  border: 0;
+  position: absolute;
+  transform-origin: center bottom;
+  -webkit-transform-origin: center bottom;
+  -moz-transform-origin: center bottom;
+  -o-transform-origin: center bottom;
+  transform: rotate(0deg);
+}
+#clock #hour {
+  border-radius: 0.75em 0.75em 0 0;
+  width: 1.5em;
+  height: 6em;
+  top: 9em;
+  left: 14.25em;
+  background-color: #BECDE0;
+  border: solid 1px #486386;
+}
+#clock #minute {
+  border-radius: 0.5em;
+  width: 1em;
+  height: 11em;
+  top: 4em;
+  left: 14.5em;
+  background-color: #BECDE0;
+  border: solid 1px #486386;
+}
+#clock #second {
+  border-radius: 0.25em;
+  width: 0.5em;
+  height: 14em;
+  top: 1em;
+  left: 14.75em;
+  background-color: #BECDE0;
+}
+#clock #center {
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  top: 14em;
+  left: 14em;
+  transform: rotate(0deg);
+  background-color: #BECDE0;
+  border: solid 1px #486386;
+}
+.smallTick {
+  width: 0.1em;
+  height: 0.5em;
+  background-color: #BECDE0;
+  margin: 0 1.45em;
+}
+.mediumTick {
+  width: 0.25em;
+  height: 0.8em;
+  background-color: #BECDE0;
+  margin: 0 1.375em;
+}
+.largeTick {
+  width: 0.4em;
+  height: 0.8em;
+  background-color: #BECDE0;
+  position: relative;
+  margin: 0 1.3em;
+}
+.tickNum {
+  font-family: Arial, sans-serif;
+  font-size: 2em;
+  line-height: 0;
+  color: black;
+  position: relative;
+  top: 1em;
+  left: 0;
+  padding: 0 0.5em;
+}
+div.faceBox {
+  border: 0;
+  width: 3em;
+  height: 15em;
+  top: 0;
+  left: 13.5em;
+  position: absolute;
+  text-align: center;
+  overflow: visible;
+}
+
+/* End Clock Block css */
+
+.ctr {width: 100%; text-align: center;}
+
+div.col, div.col-1, div.col-2, div.col-3, div.col-4, div.col-5, div.col-6, div.col-7, div.col-8, div.col-9, div.col-10, div.col-11, div.col-12 {
+  border: 0px solid #FFF;
+}
+
+.sp-col {
+  vertical-align: top !important;
+  width: 10px;
+  height:30px;
+}
+
+div.nb {
+ border: 0px;
+}
+
+div.nsb {
+ border-left: 0px;
+ border-right: 0px;
+}
+ 
+div.nw {
+  white-space: nowrap !important;
+} 
+
+div.wr {
+  white-space: normal !important;
+}
+
+div.sp-10 {
+  width: 10px !important;
+  margin: 0px;
+}
+
+div.mw1 {
+  width: 100%;
+  min-width: 60px;
+}
+
+div.mw2 {
+  width: 100%;
+  min-width: 50px;
+}
+
+div.table1 {
+  display: table;
+  width: 100%;
+  min-width: 200px;
+  background-color: #FFF;
+  padding: 2px;
+  border: 2px solid #006699;
+}
+
+div.resp-add {
+  display: hidden;
+}
+
+
+a.fa {
+  font-size:1.5em;
+  text-decoration: none;
+}
+
+
+   	@media only screen and (max-width: 736px) {
+	div.iresp { display:none;}
+
+}
+   	@media only screen and (max-width: 475px) {
+	div.resp { display:none;}
+
+}
+   	@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation : portrait) {
+	div.resp { display:none;}
+
+}
+
+   	@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation : portrait) {
+	div.resp {display:none;}
+
+}
+
+	@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2) and (orientation : portrait) {
+	div.resp {display:none;}
+
+}
+
+	@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2) and (orientation : portrait) {
+	div.resp {display:none;}
+
+}
+
+	@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3) and (orientation : portrait) {
+	div.resp {display:none;}
+
+}
+
+	@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3) and (orientation : portrait) {
+	div.resp {display:none;}
+
+}
+
+	@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3) and (orientation : portrait) {
+	div.resp {display:none;}
+
+}
+
+	@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3) and (orientation : portrait) {
+	div.resp {display:none;}
+
+}

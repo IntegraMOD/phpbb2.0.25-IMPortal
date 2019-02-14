@@ -1,0 +1,13 @@
+ec91d7e4c1ba8cc812438b92831c59fca:4:{i:0;a:20:{s:3:"bid";s:1:"1";s:5:"title";s:16:"Board Navigation";s:11:"title_image";s:0:"";s:7:"content";s:409:"<table width="100%" cellpadding="0" cellspacing="1" border="0">
+<tr>
+<td align="left"><span class="genmed" style="line-height: 150%">
+<a href="portal.php">Home</a><br />
+<a href="index.php">Forum</a><br />
+<a href="memberlist.php">Memberlist</a><br />
+<a href="faq.php">FAQ</a><br />
+<a href="search.php">Search</a><br /><br />
+<a href="portal.php?page=2">Layout 1</a>
+
+</span></td>
+</tr>
+</table>";s:9:"bposition";s:1:"@";s:6:"weight";s:1:"1";s:6:"active";s:1:"1";s:9:"blockfile";s:0:"";s:4:"view";s:1:"0";s:6:"layout";s:1:"0";s:5:"cache";s:1:"0";s:10:"cache_time";s:1:"0";s:16:"block_bbcode_uid";s:0:"";s:4:"type";s:1:"0";s:6:"border";s:1:"1";s:8:"titlebar";s:1:"1";s:9:"openclose";s:1:"0";s:10:"background";s:1:"1";s:5:"local";s:1:"0";s:6:"groups";s:0:"";}i:1;a:20:{s:3:"bid";s:1:"6";s:5:"title";s:10:"User Block";s:11:"title_image";s:0:"";s:7:"content";s:0:"";s:9:"bposition";s:1:"@";s:6:"weight";s:1:"2";s:6:"active";s:1:"1";s:9:"blockfile";s:21:"blocks_imp_user_block";s:4:"view";s:1:"0";s:6:"layout";s:1:"0";s:5:"cache";s:1:"0";s:10:"cache_time";s:1:"0";s:16:"block_bbcode_uid";s:0:"";s:4:"type";s:1:"1";s:6:"border";s:1:"1";s:8:"titlebar";s:1:"1";s:9:"openclose";s:1:"1";s:10:"background";s:1:"1";s:5:"local";s:1:"0";s:6:"groups";s:0:"";}i:2;a:20:{s:3:"bid";s:1:"7";s:5:"title";s:13:"Who is Online";s:11:"title_image";s:0:"";s:7:"content";s:0:"";s:9:"bposition";s:1:"@";s:6:"weight";s:1:"3";s:6:"active";s:1:"1";s:9:"blockfile";s:23:"blocks_imp_online_users";s:4:"view";s:1:"0";s:6:"layout";s:1:"0";s:5:"cache";s:1:"1";s:10:"cache_time";s:3:"300";s:16:"block_bbcode_uid";s:0:"";s:4:"type";s:1:"1";s:6:"border";s:1:"1";s:8:"titlebar";s:1:"1";s:9:"openclose";s:1:"1";s:10:"background";s:1:"1";s:5:"local";s:1:"0";s:6:"groups";s:0:"";}i:3;a:20:{s:3:"bid";s:2:"10";s:5:"title";s:6:"Search";s:11:"title_image";s:0:"";s:7:"content";s:0:"";s:9:"bposition";s:1:"@";s:6:"weight";s:1:"4";s:6:"active";s:1:"1";s:9:"blockfile";s:17:"blocks_imp_search";s:4:"view";s:1:"0";s:6:"layout";s:1:"0";s:5:"cache";s:1:"1";s:10:"cache_time";s:10:"1000000000";s:16:"block_bbcode_uid";s:0:"";s:4:"type";s:1:"1";s:6:"border";s:1:"1";s:8:"titlebar";s:1:"1";s:9:"openclose";s:1:"1";s:10:"background";s:1:"1";s:5:"local";s:1:"0";s:6:"groups";s:0:"";}}
