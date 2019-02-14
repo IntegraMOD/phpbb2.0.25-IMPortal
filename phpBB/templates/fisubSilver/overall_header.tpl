@@ -31,12 +31,32 @@
 </script>
 <!-- END switch_enable_pm_popup -->
 
+<script>
+jQuery(document).ready(function() {
+	jQuery('.toggle-nav').click(function(e) {
+		jQuery(this).toggleClass('active');
+		jQuery('.menu ul').toggleClass('active');
+
+		e.preventDefault();
+	});
+});
+</script>
+
+
 </head>
 <body>
 {QBARS}
 <a id="tops"></a>
 <div class="container-fluid">
-  <div class="bodyline my-2">
+  <div style="display:none" class="respnav">
+    <nav class="menu w-100">
+	  <ul class="active pl-0">
+		<li>{QMENUS}</li>
+	  </ul>
+	  <a class="toggle-nav" href="#">&#9776;</a>
+    </nav>
+  </div>
+  <div class="bodyline my-2" style="z-index: 1;">
   <div class="container-fluid">
   <div class="row px-0">
     <div class="col-4 d-inline-block float-lg-left my-2">
@@ -50,7 +70,7 @@
   <div class="row m-1"></div>
   <div class="container-fluid">
   <div class="nav text-center">
-	<div class="col mainmenu qb"> 
+	<div class="col mainmenu qb resp"> 
 	{QMENUS}  
 	</div>
   </div>
