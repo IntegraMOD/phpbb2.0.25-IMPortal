@@ -27,4 +27,4 @@ added mysqli support.. thank you Vendethiel
 added our IM chmod script so users do not have to manually set file permissions
 
 
-The purpose for this little project is to dublicate the core structure of IntegraMOD 151 so we can build a solid bootstrap template
+The purpose for this project is to duplicate the core structure of IntegraMOD 151, to build a solid bootstrap template
