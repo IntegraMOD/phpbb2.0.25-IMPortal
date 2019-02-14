@@ -102,6 +102,7 @@ $lang['Page_of'] = 'Page <b>%d</b> of <b>%d</b>'; // Replaces with: Page 1 of 2 
 $lang['FB'] = 'Facebook';
 $lang['IG'] = 'Instagram';
 $lang['PT'] = 'Pinterest';
+$lang['SKP'] = 'Skype';
 
 $lang['Forum_Index'] = '%s Forum Index';  // eg. sitename Forum Index, %s can be removed if you prefer
 

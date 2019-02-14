@@ -416,7 +416,7 @@ $select_post_order .= '</select>';
 //
 // Go ahead and pull all data for this topic
 //
-$sql = "SELECT u.username, u.user_id, u.user_posts, u.user_from, u.user_website, u.user_email, u.user_fb, u.user_ig, u.user_pt, u.user_regdate, u.user_viewemail, u.user_rank, u.user_sig, u.user_sig_bbcode_uid, u.user_avatar, u.user_avatar_type, u.user_allowavatar, u.user_allowsmile, p.*,  pt.post_text, pt.post_subject, pt.bbcode_uid
+$sql = "SELECT u.username, u.user_id, u.user_posts, u.user_from, u.user_website, u.user_email, u.user_fb, u.user_ig, u.user_pt, u.user_skp, u.user_regdate, u.user_viewemail, u.user_rank, u.user_sig, u.user_sig_bbcode_uid, u.user_avatar, u.user_avatar_type, u.user_allowavatar, u.user_allowsmile, p.*,  pt.post_text, pt.post_subject, pt.bbcode_uid
 	FROM " . POSTS_TABLE . " p, " . USERS_TABLE . " u, " . POSTS_TEXT_TABLE . " pt
 	WHERE p.topic_id = $topic_id
 		$limit_posts_time
@@ -1019,6 +1019,9 @@ for($i = 0; $i < $total_posts; $i++)
 		$pt_img = ( $postrow[$i]['user_pt'] ) ? '<a class="fa fa-pinterest-square" aria-hidden="true" href="https://www.pinterest.com/' . $postrow[$i]['user_pt'] . '" target="blank" title="' . $lang['PT'] . '"><img src="' . $images['icon_pt'] . '" alt="' . $lang['PT'] . '" /></a>' : ''; 
 		$pt = ( $postrow[$i]['user_pt'] ) ? '<a href="https://www.pinterest.com/' . $postrow[$i]['user_pt'] . '" target="blank">' . $lang['PT'] . '</a>' : ''; 
 
+	    $skp_img = ( $postrow[$i]['user_skp'] ) ? '<a class="fa fa-skype" aria-hidden="true" href="skype:' . $postrow[$i]['user_skp'] . '?call" title="' . $lang['SKP'] . '"><img src="' . $images['icon_skp'] . '" alt="' . $lang['SKP'] . '" /></a>' : ''; 
+	    $skp = ( $postrow[$i]['user_skp'] ) ? '<a href="skype:' . $postrow[$i]['user_skp'] . '?call">' . $lang['SKP'] . '</a>' : ''; 
+
 	}
 	else
 	{
@@ -1036,6 +1039,8 @@ for($i = 0; $i < $total_posts; $i++)
 		$ig = '';
 		$pt_img = '';
 		$pt = '';
+		$skp_img = '';
+		$skp = '';
 	}
 
 	$temp_url = append_sid("posting.$phpEx?mode=quote&amp;" . POST_POST_URL . "=" . $postrow[$i]['post_id']);
@@ -1240,6 +1245,8 @@ for($i = 0; $i < $total_posts; $i++)
 		'IG' => $ig,
 		'PT_IMG' => $pt_img,
 		'PT' => $pt,
+		'SKP_IMG' => $skp_img,
+		'SKP' => $skp,
 		'EDIT_IMG' => $edit_img,
 		'EDIT' => $edit,
 		'QUOTE_IMG' => $quote_img,

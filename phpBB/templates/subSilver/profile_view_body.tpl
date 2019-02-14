@@ -68,13 +68,17 @@
 		  <td valign="middle" nowrap="nowrap" align="right"><span class="gen">{L_PT}:</span></td>
 		  <td class="row1" valign="middle"><span class="gen">{PT}</span></td>
 		</tr>
+		<tr> 
+		  <td valign="middle" nowrap="nowrap" align="right"><span class="gen">{L_SKP}:</span></td>
+		  <td class="row1" valign="middle"><span class="gen">{SKP}</span></td>
+		</tr>
 	  </table>
 	</td>
   </tr>
 </table>
-
+<br /><br />
 <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
   <tr> 
-	<td align="right"><span class="nav"><br />{JUMPBOX}</span></td>
+	<td align="right"><span class="nav">{JUMPBOX}</span></td>
   </tr>
 </table>

@@ -529,6 +529,7 @@ CREATE TABLE phpbb_users (
    user_fb varchar(255),
    user_ig varchar(255),
    user_pt varchar(255),
+   user_skp varchar(255),
    user_occ varchar(100),
    user_interests varchar(255),
    user_actkey varchar(32),

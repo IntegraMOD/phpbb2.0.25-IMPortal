@@ -80,6 +80,10 @@
         <div class="col-8 row2 py-1"><input type="text" name="pt" class="post" style="width: 200px"  size="10" maxlength="255" value="{PT}" /></div>
       </div>
       <div class="row gen">
+        <div class="col-4 row1 py-1">{L_SKP}&nbsp;{L_USERNAME}:</div>
+        <div class="col-8 row2 py-1"><input type="text" name="skp" class="post" style="width: 200px"  size="10" maxlength="255" value="{SKP}" /></div>
+      </div>
+      <div class="row gen">
         <div class="col-4 row1 py-1">{L_WEBSITE}:</div>
         <div class="col-8 row2 py-1"><input type="text" class="post" style="width: 200px"  name="website" size="25" maxlength="255" value="{WEBSITE}" /></div>
       </div>

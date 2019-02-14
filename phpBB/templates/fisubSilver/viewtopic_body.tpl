@@ -60,7 +60,7 @@
     <div class="col {postrow.ROW_CLASS}">
       	<div class="row">
 			<div class="col-2"><span class="nav"><a href="#top" class="nav fa fa-arrow-circle-up" title="{L_BACK_TO_TOP}">&nbsp;</a></span></div>
-			<div class="col-10 d-inline-block">{postrow.PROFILE_IMG} {postrow.PM_IMG} {postrow.EMAIL_IMG} {postrow.WWW_IMG} {postrow.FB_IMG} {postrow.IG_IMG} {postrow.PT_IMG}</div>
+			<div class="col-10 d-inline-block">{postrow.PROFILE_IMG} {postrow.PM_IMG} {postrow.EMAIL_IMG} {postrow.WWW_IMG} {postrow.FB_IMG} {postrow.IG_IMG} {postrow.PT_IMG} {postrow.SKP_IMG}</div>
 		</div>
       	<div class="row py-1"></div>
     </div>

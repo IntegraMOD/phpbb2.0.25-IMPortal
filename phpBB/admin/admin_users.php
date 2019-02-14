@@ -232,6 +232,7 @@ if( isset ($_POST['deleteuser']) && $_POST['deleteuser'] && ( $userdata['user_id
 		$fb = ( !empty($_POST['fb']) ) ? trim(strip_tags( $_POST['fb'] ) ) : '';
 		$ig = ( !empty($_POST['ig']) ) ? trim(strip_tags( $_POST['ig'] ) ) : '';
 		$pt = ( !empty($_POST['pt']) ) ? trim(strip_tags( $_POST['pt'] ) ) : '';
+		$skp = ( !empty($_POST['skp']) ) ? trim(strip_tags( $_POST['skp'] ) ) : '';
 
 		$website = ( !empty($_POST['website']) ) ? trim(strip_tags( $_POST['website'] ) ) : '';
 		$location = ( !empty($_POST['location']) ) ? trim(strip_tags( $_POST['location'] ) ) : '';
@@ -239,7 +240,7 @@ if( isset ($_POST['deleteuser']) && $_POST['deleteuser'] && ( $userdata['user_id
 		$interests = ( !empty($_POST['interests']) ) ? trim(strip_tags( $_POST['interests'] ) ) : '';
 		$signature = ( !empty($_POST['signature']) ) ? trim(str_replace('<br />', "\n", $_POST['signature'] ) ) : '';
 
-		validate_optional_fields($fb, $ig, $pt, $website, $location, $occupation, $interests, $signature);
+		validate_optional_fields($fb, $ig, $pt, $skp, $website, $location, $occupation, $interests, $signature);
 
 		$viewemail = ( isset( $_POST['viewemail']) ) ? ( ( $_POST['viewemail'] ) ? TRUE : 0 ) : 0;
 		$allowviewonline = ( isset( $_POST['hideonline']) ) ? ( ( $_POST['hideonline'] ) ? 0 : TRUE ) : TRUE;
@@ -285,6 +286,7 @@ if( isset ($_POST['deleteuser']) && $_POST['deleteuser'] && ( $userdata['user_id
 			$fb = htmlspecialchars_wrapped(stripslashes($fb), ENT_COMPAT, 'utf-8');
 			$ig = htmlspecialchars_wrapped(stripslashes($ig), ENT_COMPAT, 'utf-8');
 			$pt = htmlspecialchars_wrapped(stripslashes($pt), ENT_COMPAT, 'utf-8');
+			$skp = htmlspecialchars_wrapped(stripslashes($skp), ENT_COMPAT, 'utf-8');
 
 			$website = htmlspecialchars_wrapped(stripslashes($website), ENT_COMPAT, 'utf-8');
 			$location = htmlspecialchars_wrapped(stripslashes($location), ENT_COMPAT, 'utf-8');
@@ -667,7 +669,7 @@ if( isset ($_POST['deleteuser']) && $_POST['deleteuser'] && ( $userdata['user_id
 			$username_sql = (isset($username_sql)) ? $username_sql : '';
 			$signature_bbcode_uid = (isset($signature_bbcode_uid)) ? $signature_bbcode_uid : '';			
 			$sql = "UPDATE " . USERS_TABLE . "
-				SET " . $username_sql . $passwd_sql . "user_email = '" . str_replace("\'", "''", $email) . "', user_website = '" . str_replace("\'", "''", $website) . "', user_occ = '" . str_replace("\'", "''", $occupation) . "', user_from = '" . str_replace("\'", "''", $location) . "', user_interests = '" . str_replace("\'", "''", $interests) . "', user_sig = '" . str_replace("\'", "''", $signature) . "', user_viewemail = $viewemail, user_fb = '" . str_replace("\'", "''", $fb) . "', user_ig = '" . str_replace("\'", "''", $ig) . "', user_pt = '" . str_replace("\'", "''", $pt) . "', user_attachsig = $attachsig, user_sig_bbcode_uid = '$signature_bbcode_uid', user_allowsmile = $allowsmilies, user_allowhtml = $allowhtml, user_allowavatar = $user_allowavatar, user_allowbbcode = $allowbbcode, user_allow_viewonline = $allowviewonline, user_notify = $notifyreply, user_allow_pm = $user_allowpm, user_notify_pm = $notifypm, user_popup_pm = $popuppm, user_lang = '" . str_replace("\'", "''", $user_lang) . "', user_style = $user_style, user_timezone = $user_timezone, user_dateformat = '" . str_replace("\'", "''", $user_dateformat) . "', user_active = $user_status, user_rank = $user_rank" . $avatar_sql . "
+				SET " . $username_sql . $passwd_sql . "user_email = '" . str_replace("\'", "''", $email) . "', user_website = '" . str_replace("\'", "''", $website) . "', user_occ = '" . str_replace("\'", "''", $occupation) . "', user_from = '" . str_replace("\'", "''", $location) . "', user_interests = '" . str_replace("\'", "''", $interests) . "', user_sig = '" . str_replace("\'", "''", $signature) . "', user_viewemail = $viewemail, user_skp = '" . str_replace("\'", "''", $skp) . "', user_fb = '" . str_replace("\'", "''", $fb) . "', user_ig = '" . str_replace("\'", "''", $ig) . "', user_pt = '" . str_replace("\'", "''", $pt) . "', user_attachsig = $attachsig, user_sig_bbcode_uid = '$signature_bbcode_uid', user_allowsmile = $allowsmilies, user_allowhtml = $allowhtml, user_allowavatar = $user_allowavatar, user_allowbbcode = $allowbbcode, user_allow_viewonline = $allowviewonline, user_notify = $notifyreply, user_allow_pm = $user_allowpm, user_notify_pm = $notifypm, user_popup_pm = $popuppm, user_lang = '" . str_replace("\'", "''", $user_lang) . "', user_style = $user_style, user_timezone = $user_timezone, user_dateformat = '" . str_replace("\'", "''", $user_dateformat) . "', user_active = $user_status, user_rank = $user_rank" . $avatar_sql . "
 				WHERE user_id = $user_id";
 
 			if( $result = $db->sql_query($sql) )
@@ -740,6 +742,7 @@ if( isset ($_POST['deleteuser']) && $_POST['deleteuser'] && ( $userdata['user_id
 			$fb = htmlspecialchars_wrapped(stripslashes($fb), ENT_COMPAT, 'utf-8');
 			$ig = htmlspecialchars_wrapped(stripslashes($ig), ENT_COMPAT, 'utf-8');
 			$pt = htmlspecialchars_wrapped(stripslashes($pt), ENT_COMPAT, 'utf-8');
+			$skp = htmlspecialchars_wrapped(stripslashes($skp), ENT_COMPAT, 'utf-8');
 
 			$website = htmlspecialchars_wrapped(stripslashes($website), ENT_COMPAT, 'utf-8');
 			$location = htmlspecialchars_wrapped(stripslashes($location), ENT_COMPAT, 'utf-8');
@@ -783,6 +786,7 @@ if( isset ($_POST['deleteuser']) && $_POST['deleteuser'] && ( $userdata['user_id
 		$fb = htmlspecialchars_wrapped($this_userdata['user_fb'], ENT_COMPAT, 'utf-8');
 		$ig = htmlspecialchars_wrapped($this_userdata['user_ig'], ENT_COMPAT, 'utf-8');
 		$pt = htmlspecialchars_wrapped($this_userdata['user_pt'], ENT_COMPAT, 'utf-8');
+		$skp = htmlspecialchars_wrapped($this_userdata['user_skp'], ENT_COMPAT, 'utf-8');
 
 		$website = htmlspecialchars_wrapped($this_userdata['user_website'], ENT_COMPAT, 'utf-8');
 		$location = htmlspecialchars_wrapped($this_userdata['user_from'], ENT_COMPAT, 'utf-8');
@@ -910,6 +914,7 @@ if( isset ($_POST['deleteuser']) && $_POST['deleteuser'] && ( $userdata['user_id
 			$s_hidden_fields .= '<input type="hidden" name="fb" value="' . str_replace("\"", "&quot;", $fb) . '" />';
 			$s_hidden_fields .= '<input type="hidden" name="ig" value="' . str_replace("\"", "&quot;", $ig) . '" />';
 			$s_hidden_fields .= '<input type="hidden" name="pt" value="' . str_replace("\"", "&quot;", $pt) . '" />';
+			$s_hidden_fields .= '<input type="hidden" name="skp" value="' . str_replace("\"", "&quot;", $skp) . '" />';
 			$s_hidden_fields .= '<input type="hidden" name="website" value="' . str_replace("\"", "&quot;", $website) . '" />';
 			$s_hidden_fields .= '<input type="hidden" name="location" value="' . str_replace("\"", "&quot;", $location) . '" />';
 			$s_hidden_fields .= '<input type="hidden" name="occupation" value="' . str_replace("\"", "&quot;", $occupation) . '" />';
@@ -1016,6 +1021,7 @@ if( isset ($_POST['deleteuser']) && $_POST['deleteuser'] && ( $userdata['user_id
 			'FB' => $fb,
 			'IG' => $ig,
 			'PT' => $pt,
+			'SKP' => $skp,
 			'OCCUPATION' => $occupation,
 			'INTERESTS' => $interests,
 			'LOCATION' => $location,
@@ -1065,6 +1071,7 @@ if( isset ($_POST['deleteuser']) && $_POST['deleteuser'] && ( $userdata['user_id
 			'L_FB' => $lang['FB'],
 			'L_IG' => $lang['IG'],
 			'L_PT' => $lang['PT'],
+			'L_SKP' => $lang['SKP'],
 			'L_LOCATION' => $lang['Location'],
 			'L_OCCUPATION' => $lang['Occupation'],
 			'L_BOARD_LANGUAGE' => $lang['Board_lang'],

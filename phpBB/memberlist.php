@@ -105,6 +105,7 @@ $template->assign_vars(array(
 	'L_FB' => $lang['FB'],
 	'L_IG' => $lang['IG'],
 	'L_PT' => $lang['PT'],
+	'L_SKP' => $lang['SKP'],
 	'L_JOINED' => $lang['Joined'], 
 	'L_POSTS' => $lang['Posts'], 
 	'L_PM' => $lang['Private_Message'], 
@@ -142,7 +143,7 @@ switch( $mode )
 		break;
 }
 
-$sql = "SELECT username, user_id, user_viewemail, user_posts, user_regdate, user_from, user_website, user_email, user_fb, user_ig, user_pt, user_avatar, user_avatar_type, user_allowavatar 
+$sql = "SELECT username, user_id, user_viewemail, user_posts, user_regdate, user_from, user_website, user_email, user_fb, user_ig, user_pt, user_skp, user_avatar, user_avatar_type, user_allowavatar 
 	FROM " . USERS_TABLE . "
 	WHERE user_id <> " . ANONYMOUS . "
 	ORDER BY $order_by";
@@ -214,6 +215,9 @@ if ( $row = $db->sql_fetchrow($result) )
 		$pt_img = ( $row['user_pt'] ) ? '<a class="fa fa-pinterest-square" aria-hidden="true" href="https://www.pinterest.com/' . $row['user_pt'] . '" target="blank" title="' . $lang['PT'] . '"><img src="' . $images['icon_pt'] . '" alt="' . $lang['PT'] . '" /></a>' : ''; 
 		$pt = ( $row['user_pt'] ) ? '<a href="https://www.pinterest.com/' . $row['user_pt'] . '" target="blank">' . $lang['PT'] . '</a>' : ''; 
 
+	    $skp_img = ( $row['user_skp'] ) ? '<a class="fa fa-skype" aria-hidden="true" href="skype:' . $row['user_skp'] . '?call" title="' . $lang['SKP'] . '"><img src="' . $images['icon_skp'] . '" alt="' . $lang['SKP'] . '" /></a>' : ''; 
+	    $skp = ( $row['user_skp'] ) ? '<a href="skype:' . $row['user_skp'] . '?call">' . $lang['SKP'] . '</a>' : ''; 
+
 		$temp_url = append_sid("search.$phpEx?search_author=" . urlencode($username) . "&amp;showresults=posts");
 		$search_img = '<a class="fa fa-search" aria-hidden="true" href="' . $temp_url . '" title="' . sprintf($lang['Search_user_posts'], $username) . '"><img src="' . $images['icon_search'] . '" alt="' . sprintf($lang['Search_user_posts'], $username) . '" /></a>';
 		$search = '<a href="' . $temp_url . '">' . sprintf($lang['Search_user_posts'], $username) . '</a>';
@@ -246,6 +250,8 @@ if ( $row = $db->sql_fetchrow($result) )
 			'IG' => $ig,
 			'PT_IMG' => $pt_img,
 			'PT' => $pt,
+			'SKP_IMG' => $skp_img,
+			'SKP' => $skp,
 
 			'U_VIEWPROFILE' => append_sid("profile.$phpEx?mode=viewprofile&amp;" . POST_USERS_URL . "=$user_id"))
 		);

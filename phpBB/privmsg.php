@@ -228,7 +228,7 @@ else if ( $mode == 'read' )
 	//
 	// Major query obtains the message ...
 	//
-	$sql = "SELECT u.username AS username_1, u.user_id AS user_id_1, u2.username AS username_2, u2.user_id AS user_id_2, u.user_sig_bbcode_uid, u.user_posts, u.user_from, u.user_website, u.user_email, u.user_fb, u.user_ig, u.user_pt, u.user_regdate, u.user_viewemail, u.user_rank, u.user_sig, u.user_avatar, pm.*, pmt.privmsgs_bbcode_uid, pmt.privmsgs_text
+	$sql = "SELECT u.username AS username_1, u.user_id AS user_id_1, u2.username AS username_2, u2.user_id AS user_id_2, u.user_sig_bbcode_uid, u.user_posts, u.user_from, u.user_website, u.user_email, u.user_fb, u.user_ig, u.user_pt, u.user_skp, u.user_regdate, u.user_viewemail, u.user_rank, u.user_sig, u.user_avatar, pm.*, pmt.privmsgs_bbcode_uid, pmt.privmsgs_text
 		FROM " . PRIVMSGS_TABLE . " pm, " . PRIVMSGS_TEXT_TABLE . " pmt, " . USERS_TABLE . " u, " . USERS_TABLE . " u2 
 		WHERE pm.privmsgs_id = $privmsgs_id
 			AND pmt.privmsgs_text_id = pm.privmsgs_id 
@@ -533,6 +533,10 @@ else if ( $mode == 'read' )
 	$pt_img = ( $privmsg[$i]['user_pt'] ) ? '<a class="fa fa-pinterest-square" aria-hidden="true" href="https://www.pinterest.com/' . $privmsg[$i]['user_pt'] . '" target="blank" title="' . $lang['PT'] . '"><img src="' . $images['icon_pt'] . '" alt="' . $lang['PT'] . '" /></a>' : ''; 
 	$pt = ( $privmsg[$i]['user_pt'] ) ? '<a href="https://www.pinterest.com/' . $privmsg[$i]['user_pt'] . '" target="blank">' . $lang['PT'] . '</a>' : ''; 
 
+	$skp_img = ( $privmsg[$i]['user_skp'] ) ? '<a class="fa fa-skype" aria-hidden="true" href="skype:' . $privmsg[$i]['user_skp'] . '?call" title="' . $lang['SKP'] . '"><img src="' . $images['icon_skp'] . '" alt="' . $lang['SKP'] . '" /></a>' : ''; 
+	$skp = ( $privmsg[$i]['user_skp'] ) ? '<a href="skype:' . $privmsg[$i]['user_skp'] . '?call">' . $lang['SKP'] . '</a>' : ''; 
+
+
 	$temp_url = append_sid("search.$phpEx?search_author=" . urlencode($username_from) . "&amp;showresults=posts");
 	$search_img = '<a href="' . $temp_url . '"><img src="' . $images['icon_search'] . '" alt="' . sprintf($lang['Search_user_posts'], $username_from) . '" title="' . sprintf($lang['Search_user_posts'], $username_from) . '" border="0" /></a>';
 	$search = '<a href="' . $temp_url . '">' . sprintf($lang['Search_user_posts'], $username_from) . '</a>';
@@ -641,7 +645,9 @@ else if ( $mode == 'read' )
 		'IG_IMG' => $ig_img,
 		'IG' => $ig,
 		'PT_IMG' => $msn_img,
-		'PT' => $pt)
+		'PT' => $pt,
+		'SKP_IMG' => $skp_img, 
+		'SKP' => $skp) 
 	);
 
 	$template->pparse('body');

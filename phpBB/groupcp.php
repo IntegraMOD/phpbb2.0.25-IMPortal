@@ -27,7 +27,7 @@ include($phpbb_root_path . 'common.'.$phpEx);
 
 // -------------------------
 //
-function generate_user_info(&$row, $date_format, $group_mod, &$from, &$posts, &$joined, &$poster_avatar, &$profile_img, &$profile, &$search_img, &$search, &$pm_img, &$pm, &$email_img, &$email, &$www_img, &$www, &$fb_img, &$fb, &$ig_img, &$ig, &$pt_img, &$pt)
+function generate_user_info(&$row, $date_format, $group_mod, &$from, &$posts, &$joined, &$poster_avatar, &$profile_img, &$profile, &$search_img, &$search, &$pm_img, &$pm, &$email_img, &$email, &$www_img, &$www, &$skp_img, &$skp, &$fb_img, &$fb, &$ig_img, &$ig, &$pt_img, &$pt)
 {
 	global $lang, $images, $board_config, $phpEx;
 
@@ -85,6 +85,9 @@ function generate_user_info(&$row, $date_format, $group_mod, &$from, &$posts, &$
 
 	$pt_img = ( $row['user_pt'] ) ? '<a class="fa fa-pinterest-square" aria-hidden="true" href="https://www.pinterest.com/' . $row['user_pt'] . '" target="blank" title="' . $lang['PT'] . '"><img src="' . $images['icon_pt'] . '" alt="' . $lang['PT'] . '" /></a>' : ''; 
 	$pt = ( $row['user_pt'] ) ? '<a href="https://www.pinterest.com/' . $row['user_pt'] . '" target="blank">' . $lang['PT'] . '</a>' : ''; 
+
+	$skp_img = ( $row['user_skp'] ) ? '<a class="fa fa-skype" aria-hidden="true" href="skype:' . $row['user_skp'] . '?call" title="' . $lang['SKP'] . '"><img src="' . $images['icon_skp'] . '" alt="' . $lang['SKP'] . '" /></a>' : ''; 
+	$skp = ( $row['user_skp'] ) ? '<a href="skype:' . $row['user_skp'] . '?call">' . $lang['SKP'] . '</a>' : ''; 
 
 
 	$temp_url = append_sid("search.$phpEx?search_author=" . urlencode($row['username']) . "&amp;showresults=posts");
@@ -767,7 +770,7 @@ else if ( $group_id )
 	//
 	// Get moderator details for this group
 	//
-	$sql = "SELECT username, user_id, user_viewemail, user_posts, user_regdate, user_from, user_website, user_email, user_fb, user_ig, user_pt  
+	$sql = "SELECT username, user_id, user_viewemail, user_posts, user_regdate, user_from, user_website, user_email, user_fb, user_ig, user_pt, user_skp  
 		FROM " . USERS_TABLE . " 
 		WHERE user_id = " . $group_info['group_moderator'];
 	if ( !($result = $db->sql_query($sql)) )
@@ -780,7 +783,7 @@ else if ( $group_id )
 	//
 	// Get user information for this group
 	//
-	$sql = "SELECT u.username, u.user_id, u.user_viewemail, u.user_posts, u.user_regdate, u.user_from, u.user_website, u.user_email, u.user_fb, u.user_ig, u.user_pt, ug.user_pending 
+	$sql = "SELECT u.username, u.user_id, u.user_viewemail, u.user_posts, u.user_regdate, u.user_from, u.user_website, u.user_email, u.user_fb, u.user_ig, u.user_pt, u.user_skp, ug.user_pending 
 		FROM " . USERS_TABLE . " u, " . USER_GROUP_TABLE . " ug
 		WHERE ug.group_id = $group_id
 			AND u.user_id = ug.user_id
@@ -796,7 +799,7 @@ else if ( $group_id )
 	$members_count = count($group_members);
 	$db->sql_freeresult($result);
 
-	$sql = "SELECT u.username, u.user_id, u.user_viewemail, u.user_posts, u.user_regdate, u.user_from, u.user_website, u.user_email, u.user_fb, u.user_ig, u.user_pt
+	$sql = "SELECT u.username, u.user_id, u.user_viewemail, u.user_posts, u.user_regdate, u.user_from, u.user_website, u.user_email, u.user_fb, u.user_ig, u.user_pt, u.user_skp
 		FROM " . GROUPS_TABLE . " g, " . USER_GROUP_TABLE . " ug, " . USERS_TABLE . " u
 		WHERE ug.group_id = $group_id
 			AND g.group_id = ug.group_id
@@ -901,7 +904,7 @@ else if ( $group_id )
 	$username = $group_moderator['username'];
 	$user_id = $group_moderator['user_id'];
 
-	generate_user_info($group_moderator, $board_config['default_dateformat'], $is_moderator, $from, $posts, $joined, $poster_avatar, $profile_img, $profile, $search_img, $search, $pm_img, $pm, $email_img, $email, $www_img, $fb_img, $fb, $ig_img, $ig, $pt_img, $pt);
+	generate_user_info($group_moderator, $board_config['default_dateformat'], $is_moderator, $from, $posts, $joined, $poster_avatar, $profile_img, $profile, $search_img, $search, $pm_img, $pm, $email_img, $email, $www_img, $fb_img, $fb, $ig_img, $ig, $pt_img, $pt, $skp_img, $skp);
 
 	$s_hidden_fields .= '<input type="hidden" name="sid" value="' . $userdata['session_id'] . '" />';
 
@@ -937,6 +940,7 @@ else if ( $group_id )
 		'L_FB' => $lang['FB'],
 		'L_IG' => $lang['IG'],
 		'L_PT' => $lang['PT'],
+		'L_SKP' => $lang['SKP'],
 		'L_SELECT' => $lang['Select'],
 		'L_REMOVE_SELECTED' => $lang['Remove_selected'],
 		'L_ADD_MEMBER' => $lang['Add_member'],
@@ -968,6 +972,8 @@ else if ( $group_id )
 		'MOD_IG' => $ig,
 		'MOD_PT_IMG' => $pt_img,
 		'MOD_PT' => $pt,
+		'MOD_SKP_IMG' => $skp_img,
+		'MOD_SKP' => $skp,
 
 		'U_MOD_VIEWPROFILE' => append_sid("profile.$phpEx?mode=viewprofile&amp;" . POST_USERS_URL . "=$user_id"), 
 		'U_SEARCH_USER' => append_sid("search.$phpEx?mode=searchuser"), 
@@ -992,7 +998,7 @@ else if ( $group_id )
 		$username = $group_members[$i]['username'];
 		$user_id = $group_members[$i]['user_id'];
 
-		generate_user_info($group_members[$i], $board_config['default_dateformat'], $is_moderator, $from, $posts, $joined, $poster_avatar, $profile_img, $profile, $search_img, $search, $pm_img, $pm, $email_img, $email, $www_img, $www, $fb_img, $fb, $ig_img, $ig, $pt_img, $pt);
+		generate_user_info($group_members[$i], $board_config['default_dateformat'], $is_moderator, $from, $posts, $joined, $poster_avatar, $profile_img, $profile, $search_img, $search, $pm_img, $pm, $email_img, $email, $www_img, $www, $fb_img, $fb, $ig_img, $ig, $pt_img, $pt, $skp_img, $skp);
 
 		if ( $group_info['group_type'] != GROUP_HIDDEN || $is_group_member || $is_moderator )
 		{
@@ -1024,7 +1030,9 @@ else if ( $group_id )
 				'IG' => $ig,
 				'PT_IMG' => $pt_img,
 				'PT' => $pt,
-				
+				'SKP_IMG' => $skp_img,
+				'SKP' => $skp,
+	
 				'U_VIEWPROFILE' => append_sid("profile.$phpEx?mode=viewprofile&amp;" . POST_USERS_URL . "=$user_id"))
 			);
 
@@ -1082,7 +1090,7 @@ else if ( $group_id )
 				$username = $modgroup_pending_list[$i]['username'];
 				$user_id = $modgroup_pending_list[$i]['user_id'];
 
-				generate_user_info($modgroup_pending_list[$i], $board_config['default_dateformat'], $is_moderator, $from, $posts, $joined, $poster_avatar, $profile_img, $profile, $search_img, $search, $pm_img, $pm, $email_img, $email, $www_img, $www, $fb_img, $fb, $ig_img, $ig, $pt_img, $pt);
+				generate_user_info($modgroup_pending_list[$i], $board_config['default_dateformat'], $is_moderator, $from, $posts, $joined, $poster_avatar, $profile_img, $profile, $search_img, $search, $pm_img, $pm, $email_img, $email, $www_img, $www, $fb_img, $fb, $ig_img, $ig, $pt_img, $pt, $skp_img, $skp);
 
 				$row_color = ( !($i % 2) ) ? $theme['td_color1'] : $theme['td_color2'];
 				$row_class = ( !($i % 2) ) ? $theme['td_class1'] : $theme['td_class2'];
@@ -1114,7 +1122,9 @@ else if ( $group_id )
 					'IG' => $ig,
 					'PT_IMG' => $pt_img,
 					'PT' => $pt,
-					
+					'SKP_IMG' => $skp_img,
+					'SKP' => $skp,
+
 					'U_VIEWPROFILE' => append_sid("profile.$phpEx?mode=viewprofile&amp;" . POST_USERS_URL . "=$user_id"))
 				);
 			}

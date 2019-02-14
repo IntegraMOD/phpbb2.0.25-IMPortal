@@ -151,6 +151,9 @@ $ig = $ig_img;
 $pt_img = ( $profiledata['user_pt'] ) ? '<a class="fa fa-pinterest-square" aria-hidden="true" href="https://www.pinterest.com/' . $profiledata['user_pt'] . '" target="blank" title="' . $lang['PT'] . '"><img src="' . $images['icon_pt'] . '" alt="' . $lang['PT'] . '" /></a>' : ''; 
 $pt = $pt_img;
 
+$skp_img = ( $profiledata['user_skp'] ) ? '<a class="fa fa-skype" aria-hidden="true" href="skype:' . $profiledata['user_skp'] . '?call" title="' . $lang['SKP'] . '"><img src="' . $images['icon_skp'] . '" alt="' . $lang['SKP'] . '" /></a>' : ''; 
+$skp = ( $profiledata['user_skp'] ) ? '<a href="skype:' . $profiledata['user_skp'] . '?call">' . $lang['SKP'] . '</a>' : ''; 
+
 $temp_url = append_sid("search.$phpEx?search_author=" . urlencode($profiledata['username']) . "&amp;showresults=posts");
 $search_img = '<a class="fa fa-search" aria-hidden="true" href="' . $temp_url . '" title="' . sprintf($lang['Search_user_posts'], $profiledata['username']) . '"><img src="' . $images['icon_search'] . '" alt="' . sprintf($lang['Search_user_posts'], $profiledata['username']) . '" /></a>';
 $search = '<a href="' . $temp_url . '">' . sprintf($lang['Search_user_posts'], $profiledata['username']) . '</a>';
@@ -195,6 +198,8 @@ $template->assign_vars(array(
 	'IG' => $ig,
 	'PT_IMG' => $pt_img,
 	'PT' => $pt,
+	'SKP_IMG' => $skp_img,
+	'SKP' => $skp,
 
 	'LOCATION' => ( $profiledata['user_from'] ) ? $profiledata['user_from'] : '&nbsp;',
 	'OCCUPATION' => ( $profiledata['user_occ'] ) ? $profiledata['user_occ'] : '&nbsp;',
@@ -215,6 +220,7 @@ $template->assign_vars(array(
 	'L_FB' => $lang['FB'],
 	'L_IG' => $lang['IG'],
 	'L_PT' => $lang['PT'],
+	'L_SKP' => $lang['SKP'],
 	'L_WEBSITE' => $lang['Website'],
 	'L_LOCATION' => $lang['Location'],
 	'L_OCCUPATION' => $lang['Occupation'],

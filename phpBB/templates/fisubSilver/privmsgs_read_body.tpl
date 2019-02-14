@@ -51,7 +51,7 @@
 		<table cellspacing="0" cellpadding="0" border="0" height="18">
 		  <tr> 
 			<td valign="middle" nowrap="nowrap">{PROFILE_IMG} {PM_IMG} {EMAIL_IMG} 
-			  {WWW_IMG} {FB_IMG} {IG_IMG} {PT_IMG}</td>
+			  {WWW_IMG} {FB_IMG} {IG_IMG} {PT_IMG} {SKP_IMG}</td>
 		  </tr>
 		</table>
 	  </td>

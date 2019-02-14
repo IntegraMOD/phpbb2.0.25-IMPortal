@@ -114,6 +114,7 @@ $lang['Page_of'] = 'P&aacute;gina <b>%d</b> de <b>%d</b>'; // Replaces with: Pag
 $lang['FB'] = 'Facebook';
 $lang['IG'] = 'Instagram';
 $lang['PT'] = 'Pinterest';
+$lang['SKP'] = 'Skype';
 
 $lang['Forum_Index'] = '&Iacute;ndice del Foro';  // eg. sitename Forum Index, %s can be removed if you prefer
 

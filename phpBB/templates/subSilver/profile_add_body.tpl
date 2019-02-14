@@ -93,6 +93,12 @@
 	  </td>
 	</tr>
 	<tr> 
+	  <td class="row1"><span class="gen">{L_SKP}&nbsp;{L_USERNAME}:</span></td>
+	  <td class="row2"> 
+		<input type="text" class="post" style="width: 150px"  name="ig" size="20" maxlength="255" value="{SKP}" />
+	  </td>
+	</tr>
+	<tr> 
 	  <td class="row1"><span class="gen">{L_WEBSITE}:</span></td>
 	  <td class="row2"> 
 		<input type="text" class="post" style="width: 200px"  name="website" size="25" maxlength="255" value="{WEBSITE}" />
