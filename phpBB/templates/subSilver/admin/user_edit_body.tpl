@@ -72,15 +72,9 @@
 	  </td>
 	</tr>
 	<tr> 
-	  <td class="row1"><span class="gen">{L_MESSENGER}</span></td>
+	  <td class="row1"><span class="gen">{L_SKP}&nbsp;{L_USERNAME}</span></td>
 	  <td class="row2"> 
-		<input class="post" type="text" name="msn" size="20" maxlength="255" value="{MSN}" />
-	  </td>
-	</tr>
-	<tr> 
-	  <td class="row1"><span class="gen">{L_YAHOO}</span></td>
-	  <td class="row2"> 
-		<input class="post" type="text" name="yim" size="20" maxlength="255" value="{YIM}" />
+		<input class="post" type="text" name="skp" size="20" maxlength="255" value="{SKP}" />
 	  </td>
 	</tr>
 	<tr> 
