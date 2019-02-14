@@ -28,3 +28,5 @@ added our IM chmod script so users do not have to manually set file permissions
 
 
 The purpose for this project is to duplicate the core structure of IntegraMOD 151, to build a solid bootstrap template
+
+It is not recomended to run this in a live environment because it is a work in progress. The subSilver template works fine but fisubSilver is still under construction and it has not been fully debugged beyond php7.0
