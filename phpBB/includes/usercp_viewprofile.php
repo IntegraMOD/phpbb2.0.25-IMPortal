@@ -152,7 +152,7 @@ $pt_img = ( $profiledata['user_pt'] ) ? '<a class="fa fa-pinterest-square" aria-
 $pt = $pt_img;
 
 $skp_img = ( $profiledata['user_skp'] ) ? '<a class="fa fa-skype" aria-hidden="true" href="skype:' . $profiledata['user_skp'] . '?call" title="' . $lang['SKP'] . '"><img src="' . $images['icon_skp'] . '" alt="' . $lang['SKP'] . '" /></a>' : ''; 
-$skp = ( $profiledata['user_skp'] ) ? '<a href="skype:' . $profiledata['user_skp'] . '?call">' . $lang['SKP'] . '</a>' : ''; 
+$skp = $skp_img;
 
 $temp_url = append_sid("search.$phpEx?search_author=" . urlencode($profiledata['username']) . "&amp;showresults=posts");
 $search_img = '<a class="fa fa-search" aria-hidden="true" href="' . $temp_url . '" title="' . sprintf($lang['Search_user_posts'], $profiledata['username']) . '"><img src="' . $images['icon_search'] . '" alt="' . sprintf($lang['Search_user_posts'], $profiledata['username']) . '" /></a>';
