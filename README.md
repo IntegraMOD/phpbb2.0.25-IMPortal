@@ -24,5 +24,7 @@ added language buttons to remove the template/images/lang_ folder
 
 added mysqli support.. thank you Vendethiel 
 
+added our IM chmod script so users do not have to manually set file permissions
+
 
 The purpose for this little project is to dublicate the core structure of IntegraMOD 151 so we can build a solid bootstrap template
