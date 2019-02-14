@@ -18,6 +18,8 @@ removed AIM, YIM, MSM and ICQ as they are obsolete
 
 added Facebook, Instagram and Pinterest (basic account links in profile)
 
+added skype link to members profile. Clicking the link will open skype and place a skype call
+
 added support for fontawsome images
 
 added language buttons to remove the template/images/lang_ folder
