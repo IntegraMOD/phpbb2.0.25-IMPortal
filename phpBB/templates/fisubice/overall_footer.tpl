@@ -3,7 +3,7 @@
 		 {PORTAL_TAIL}
 		 </div>
 	   </div>
-	   <div class="row bottomnav text-center">
+	   <div class="row bottomnav text-center mt-2">
 		 <div class="col mainmenu qb pt-1"><span class="resp">{QMENUS}</span></div>
 	   </div>
        </div>

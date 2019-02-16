@@ -21,7 +21,7 @@
 <div class="container-fluid forumline">
   <div class="row catHead">
     <div class="col pt-1">
-      <span class="nav genmed float-right"><a href="{U_VIEW_OLDER_TOPIC}" class="nav">{L_VIEW_PREVIOUS_TOPIC}</a>&nbsp::&nbsp;<a href="{U_VIEW_NEWER_TOPIC}" class="nav">{L_VIEW_NEXT_TOPIC}</a> &nbsp;</span>
+      <span class="nav gen float-right"><a href="{U_VIEW_OLDER_TOPIC}" class="nav">{L_VIEW_PREVIOUS_TOPIC}</a>&nbsp::&nbsp;<a href="{U_VIEW_NEWER_TOPIC}" class="nav">{L_VIEW_NEXT_TOPIC}</a> &nbsp;</span>
     </div>
   </div>
   <div class="row">
@@ -75,7 +75,7 @@
 </div>
 
 
-  <div class="row  pl-2 pb-2">
+  <div class="row  pl-2 py-2">
     <div class="col-4 p-0">
       <div class="nav"><div class="nw py-1"><a class="postbtn" href="{U_POST_NEW_TOPIC}"><i class="fa fa-file-o mr-1" aria-hidden="true"></i>{L_BUTTON_TOPIC_NEW}</a></div>&nbsp;<div class="nw py-1"><a class="postbtn" href="{U_POST_REPLY_TOPIC}"><i class="fa fa-file-text-o mr-1" aria-hidden="true"></i>{L_BUTTON_TOPIC_REPLY}</a></div></div>
     </div>

@@ -27,7 +27,7 @@ font,th,td,p { font-family: Verdana, Arial, Helvetica, sans-serif }
 a:link,a:active,a:visited { color : #006699; }
 a:hover		{ text-decoration: underline; color : #DD6900; }
 .hov		{ text-decoration: none; color : #DD6900; }
-hr		    {border-top:1px solid #EFF1F3;}
+hr, .hr		{  border-top:1px solid #EFF1F3;  }
 
 
 /* This is the border line & background colour round the entire page */
@@ -56,14 +56,12 @@ hr		    {border-top:1px solid #EFF1F3;}
 
 /* Header cells - the blue and silver gradient backgrounds */
 th, .th	{
-	color: #FFA34F; font-size: 0.846em; font-weight : bold;
-	background-color: #006699; height: 25px;
-	background-image: url(../images/cellpic3.gif);
+	color: #FFA34F; font-size: 1em; font-weight : bold;	background-color: #006699; height: 28px !important;	background-image: url(../images/cellpic3.gif);
 }
 
 .cat, .catHead, .cathead, .catSides, .catLeft, .catRight, .catBottom {
 			background-image: url(../images/cellpic1.gif);
-			background-color:#D1D7DC; border: #FFFFFF; border-style: solid; height: 28px;
+			background-color:#D1D7DC; border: #FFFFFF; border-style: solid; height: 28px !important;
 }
  
 .bdr {border: 1px solid black !important;}

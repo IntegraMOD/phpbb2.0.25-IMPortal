@@ -9,7 +9,7 @@ html{
 
 body{
 	font-family:Verdana,Helvetica,Arial,sans-serif;
-	font-size:14px;
+	font-size:13px;
 	background-color: #ecf0f6;
 }
 
@@ -18,17 +18,28 @@ html,body{
 	background-color:#ecf0f6;
 }
 
-/* The content of the posts (body of text) */
-body{color:#000000; font:14px Verdana,Arial,Helvetica,sans-serif; margin:6px; padding:0;
-}
+/* General font families for common tags */
+font,th,td,p { font-family: Verdana, Arial, Helvetica, sans-serif }
+a:link,a:active,a:visited { color : #32475f;text-decoration:none; }
+a:hover		{ text-decoration: underline; color:#839fbc;text-decoration:underline}
+.hov		{ text-decoration: none; color : #839fbc; }
+hr, .hr		{  border-top:1px solid #EFF1F3;  }
+
 
 /* General font families for common tags */
-font,th,td,p{font:13px Verdana,Arial,Helvetica,sans-serif}
+font,th,td,p, .th{font:13px Verdana,Arial,Helvetica,sans-serif}
+
+/* General text */
+.gen { font-size : 1em !important; }
+.genmed { font-size : 0.923em !important; }
+.gensmall { font-size : 0.846em !important; }
+.qb a, .qb a:hover, .qb a:focus {text-decoration: none !important; margin: 0 2px;}
 
 /* General text */
 .gensmall{font-size:0.769em}
-.genmed,.genmed{font-size:0.846em}
-.explaintitle{font-size:0.846em;font-weight:bold;color:#5c81b1}
+.genmed {font-size:0.9em}
+.gen {font-size:1em}
+.explaintitle{font-size:0.9em;font-weight:bold;color:#5c81b1}
 
 /* General page style */
 a:link,a:active,a:visited,a.postlink{color:#32475f;text-decoration:none}

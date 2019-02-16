@@ -1,9 +1,5 @@
 <!-- mod : categories hierarchy v 2 -->
-
 <form method="post" action="{S_POST_DAYS_ACTION}">
-
-
-
   <div class="container-fluid">
     <div class="row"> 
       <div class="col pl-0">
@@ -16,7 +12,7 @@
 
   <div class="container-fluid pl-0">
     <div class="row"> 
-      <div class="col-2 nw py-1 text-left"><a class="postbtn" href="{U_POST_NEW_TOPIC}">{L_BUTTON_TOPIC_NEW}</a></div>
+      <div class="col-2 nw py-1 text-left"><a class="postbtn" href="{U_POST_NEW_TOPIC}"><i class="fa fa-file-o mr-1" aria-hidden="true"></i>{L_BUTTON_TOPIC_NEW}</a></div>
       <div class="col px-0"><span class="gensmall"><b>{L_MODERATOR}: {MODERATORS}<br />{LOGGED_IN_USER_LIST}</b></span></div>
       <div class="col-3 px-0 mb-0 text-right align-text-bottom"><span class="gensmall"><b>{PAGINATION}</b><br /><a href="{U_MARK_READ}">{L_MARK_TOPICS_READ}</a></span></div>
     </div>
@@ -54,7 +50,7 @@
 
   <div class="container-fluid pl-0">
     <div class="row"> 
-      <div class="col-2 pt-2"><div class="nw py-1 text-left"><a class="postbtn" href="{U_POST_NEW_TOPIC}">{L_BUTTON_TOPIC_NEW}</a></div></div>
+      <div class="col-2 pt-2"><div class="nw py-1 text-left"><a class="postbtn" href="{U_POST_NEW_TOPIC}"><i class="fa fa-file-o mr-1" aria-hidden="true"></i>{L_BUTTON_TOPIC_NEW}</a></div></div>
  	  <div class=""></div>
       <div class="col mb-0 pr-0 text-right gensmall"><b>{PAGINATION}</b><br />{S_TIMEZONE}</div>
     </div>

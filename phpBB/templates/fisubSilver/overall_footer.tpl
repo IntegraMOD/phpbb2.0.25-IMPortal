@@ -4,7 +4,7 @@
 
   </div>
 </div>
-
+  <a id="bottom"></a>
   <div class="container-fluid">
     <div class="row align-middle text-center copyright">
       <div class="col-12">{ADMIN_LINK}</div>
@@ -26,9 +26,7 @@
   </div>
   <div class="row m-1 pb-2"></div>
 
-<!--
-<div class="ctr"><a href="https://validator.w3.org/nu/"><img src="templates/fisubSilver/images/w3c/valid-html5.png" alt="W3C" title="" width="114" height="50" /></a></div>
--->
+  <div class="ctr"><a href="https://validator.w3.org/nu/"><img src="templates/fisubSilver/images/w3c/valid-html5.png" alt="W3C" title="" width="114" height="50" /></a></div>
 
   </div>
 </div>

@@ -10,7 +10,7 @@
 
   <div class="row pl-2 pb-2">
     <div class="col-4 p-0">
-      <div class="nav"><div class="nw py-1"><a class="postbtn" href="{U_POST_NEW_TOPIC}">{L_BUTTON_TOPIC_NEW}</a></div>&nbsp;<div class="nw py-1"><a class="postbtn" href="{U_POST_REPLY_TOPIC}">{L_BUTTON_TOPIC_REPLY}</a></div></div>
+      <div class="nav"><div class="nw py-1"><a class="postbtn" href="{U_POST_NEW_TOPIC}"><i class="fa fa-file-o mr-1" aria-hidden="true"></i>{L_BUTTON_TOPIC_NEW}</a></div>&nbsp;<div class="nw py-1"><a class="postbtn" href="{U_POST_REPLY_TOPIC}"><i class="fa fa-file-text-o mr-1" aria-hidden="true"></i>{L_BUTTON_TOPIC_REPLY}</a></div></div>
     </div>
     <div class="col-8 p-1 my-auto">
       <span class="nav gensmall">&nbsp;&nbsp;&nbsp;<a href="{U_INDEX}">{L_INDEX}</a>{NAV_CAT_DESC}</span>
@@ -77,7 +77,7 @@
 
   <div class="row  pl-2 pb-2">
     <div class="col-4 p-0">
-      <div class="nav"><div class="nw py-1"><a class="postbtn" href="{U_POST_NEW_TOPIC}">{L_BUTTON_TOPIC_NEW}</a></div>&nbsp;<div class="nw py-1"><a class="postbtn" href="{U_POST_REPLY_TOPIC}">{L_BUTTON_TOPIC_REPLY}</a></div></div>
+      <div class="nav"><div class="nw py-1"><a class="postbtn" href="{U_POST_NEW_TOPIC}"><i class="fa fa-file-o mr-1" aria-hidden="true"></i>{L_BUTTON_TOPIC_NEW}</a></div>&nbsp;<div class="nw py-1"><a class="postbtn" href="{U_POST_REPLY_TOPIC}"><i class="fa fa-file-text-o mr-1" aria-hidden="true"></i>{L_BUTTON_TOPIC_REPLY}</a></div></div>
     </div>
     <div class="col-8 py-1 d-inline-block mx-auto">
       <span class="nav gensmall">&nbsp;&nbsp;&nbsp;<a href="{U_INDEX}">{L_INDEX}</a>{NAV_CAT_DESC}</span>
