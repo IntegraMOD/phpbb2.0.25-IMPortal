@@ -9,7 +9,7 @@ html{
 
 body{
 	font-family:Verdana,Helvetica,Arial,sans-serif;
-	font-size:14px;
+	font-size:13px;
 	background-color: #ecf0f6;
 }
 
@@ -25,9 +25,6 @@ a:hover		{ text-decoration: underline; color:#839fbc;text-decoration:underline}
 .hov		{ text-decoration: none; color : #839fbc; }
 hr, .hr		{  border-top:1px solid #EFF1F3;  }
 
-
-/* General font families for common tags */
-font,th,td,p, .th{font:14px Verdana,Arial,Helvetica,sans-serif}
 
 /* General text */
 .gen { font-size : 1em !important; }
@@ -97,7 +94,7 @@ font:bold 1.538em "Trebuchet MS",Verdana,Arial,Helvetica,sans-serif;text-decorat
 .qb a, .qb a:hover, .qb a:focus {text-decoration: none !important; margin: 0 2px;}
 
 /* The register, login, search etc links at the top of the page */
-.mainmenu	{ font-size : 1em; color : #516A88;}
+.mainmenu	{ font-size : 1.05em; color : #516A88;}
 a.mainmenu		{ text-decoration: none; color : #516A88;  }
 a.mainmenu:hover{ text-decoration: none; color : #32475F; }
 
@@ -432,7 +429,7 @@ a.fa {
 	padding:10px 18px;
 	box-shadow:0px 1px 1px rgba(0,0,0,0.15);
 	border-radius:3px;
-	background:#0B70A2;
+	background:#BECDE0;
 	}
 }
 
@@ -459,7 +456,7 @@ a.fa {
 
 .menu a:hover, .menu .current-item a {
 	text-decoration:none;
-	color:#DD6900;
+	color:#67809C;
 }
 
 
@@ -495,7 +492,7 @@ a.fa {
 		padding:10px 18px;
 		box-shadow:0px 1px 1px rgba(0,0,0,0.15);
 		border-radius:3px;
-		background:#0B70A2;
+		background:#BFCEE1;
 	}
 
 	.menu ul:after {
@@ -508,7 +505,7 @@ a.fa {
 		transform:translate(0%, -100%);
 		border-left:7px solid transparent;
 		border-right:7px solid transparent;
-		border-bottom:7px solid #0B70A2;
+		border-bottom:7px solid #BFCEE1;
 	}
 
 	.menu li {
@@ -527,7 +524,7 @@ a.fa {
 		display:inline-block;
 		box-shadow:0px 1px 1px rgba(0,0,0,0.15);
 		border-radius:3px;
-		background:#0B70A2;
+		background:#BFCEE1;
 		text-shadow:0px 1px 0px rgba(0,0,0,0.5);
 		color:#777;
 		font-size:20px;
@@ -536,7 +533,7 @@ a.fa {
 
 	.toggle-nav:hover, .toggle-nav.active {
 		text-decoration:none;
-		color:#66a992;
+		color:#516AA9;
 	}
 }
 
@@ -586,4 +583,4 @@ a.fa {
 	@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3) and (orientation : portrait) {
 	div.resp {display:none;}
 	div.respnav { display:block !important;}
-}
+}}

@@ -65,7 +65,7 @@ jQuery(document).ready(function() {
           </div>
 	   </div>
 	   <div class="row topnav text-center">
-		 <div class="col mainmenu qb"><span class="resp">{QMENUS}</span></div>
+		 <div class="col mainmenu qb resp">{QMENUS}</div>
 	   </div>
        <div class="row my-2"></div>
 
