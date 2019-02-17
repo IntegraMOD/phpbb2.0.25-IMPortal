@@ -1,6 +1,6 @@
 <!-- mod : categories hierarchy v 2 -->
 
-<script language="JavaScript" type="text/javascript">
+<script>
 <!--
 // bbCode control by
 // subBlue design
@@ -235,6 +235,20 @@ function storeCaret(textEl) {
 </script>
 
 <!-- BEGIN privmsg_extensions -->
+  <div class="container-fluid pl-0">
+    <div class="row"> 
+      <div class="col"><i class="fa fa-file-o mr-1" aria-hidden="true"></i>{INBOX_LINK}</div>
+      <div class="col"><i class="fa fa-share-square" aria-hidden="true"></i>{SENTBOX_LINK}</div>
+      <div class="col"><i class="fa fa-file-text-o" aria-hidden="true"></i>{OUTBOX_LINK}</div>
+      <div class="col"><i class="fa fa-save" aria-hidden="true"></i>{SAVEBOX_LINK}</div>
+    </div>
+  </div>
+
+
+
+
+
+
 <table border="0" cellspacing="0" cellpadding="0" align="center" width="100%">
   <tr> 
 	<td valign="top" align="center" width="100%"> 

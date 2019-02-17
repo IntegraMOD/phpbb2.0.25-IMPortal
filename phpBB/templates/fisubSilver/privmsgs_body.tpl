@@ -12,109 +12,104 @@
 	}
 </script>
 
-<table border="0" cellspacing="0" cellpadding="0" align="center" width="100%">
-  <tr> 
-	<td valign="top" align="center" width="100%"> 
-	  <table height="40" cellspacing="2" cellpadding="2" border="0">
-		<tr valign="middle"> 
-		  <td>{INBOX_IMG}</td>
-		  <td><span class="cattitle">{INBOX} &nbsp;</span></td>
-		  <td>{SENTBOX_IMG}</td>
-		  <td><span class="cattitle">{SENTBOX} &nbsp;</span></td>
-		  <td>{OUTBOX_IMG}</td>
-		  <td><span class="cattitle">{OUTBOX} &nbsp;</span></td>
-		  <td>{SAVEBOX_IMG}</td>
-		  <td><span class="cattitle">{SAVEBOX} &nbsp;</span></td>
-		</tr>
-	  </table>
-	</td>
-	<td align="right"> 
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <div class="row nav">
+	      <div class="col nw">{INBOX_IMG}&nbsp;{INBOX}</div>
+	      <div class="col nw">{SENTBOX_IMG}&nbsp;{SENTBOX}</div>
+	      <div class="col nw">{OUTBOX_IMG}&nbsp;{OUTBOX}</div>
+	      <div class="col nw">{SAVEBOX_IMG}&nbsp;{SAVEBOX}</div>
+        </div>
+      </div>
 	  <!-- BEGIN switch_box_size_notice -->
-	  <table width="175" cellspacing="1" cellpadding="2" border="0" class="bodyline">
-		<tr> 
-		  <td colspan="3" width="175" class="row1" nowrap="nowrap"><span class="gensmall">{BOX_SIZE_STATUS}</span></td>
-		</tr>
-		<tr> 
-		  <td colspan="3" width="175" class="row2">
+	  <div class="col-3 bodyline row1">
+        <div class="row py-1">
+	      <div class="col gensmall">{BOX_SIZE_STATUS}</div>
+	    </div>
+        <div class="row py-1">
+	      <div class="col row2 px-0">
 			<table cellspacing="0" cellpadding="1" border="0">
 			  <tr> 
-				<td bgcolor="{T_TD_COLOR2}"><img src="templates/fisubSilver/images/spacer.gif" width="{INBOX_LIMIT_IMG_WIDTH}" height="8" alt="{INBOX_LIMIT_PERCENT}" /></td>
+				<td bgcolor="{T_TD_COLOR2}"><img src="images/spacer.gif" width="{INBOX_LIMIT_IMG_WIDTH}" height="8" alt="{INBOX_LIMIT_PERCENT}" /></td>
 			  </tr>
 			</table>
-		  </td>
-		</tr>
-		<tr> 
-		  <td width="33%" class="row1"><span class="gensmall">0%</span></td>
-		  <td width="34%" align="center" class="row1"><span class="gensmall">50%</span></td>
-		  <td width="33%" align="right" class="row1"><span class="gensmall">100%</span></td>
-		</tr>
-	  </table>
+	      </div>
+	    </div>
+        <div class="row gensmall">
+	      <div class="col px-0 text-left">0%</div>
+	      <div class="col px-0 ctr">50%</div>
+	      <div class="col px-0 text-right">100%</div>
+	    </div>
+	  </div>
 	  <!-- END switch_box_size_notice -->
-	</td>
-  </tr>
-</table>
+    </div>
+  </div>
+  <br clear="all" />
 
-<br clear="all" />
-
-<form method="post" name="privmsg_list" action="{S_PRIVMSGS_ACTION}">
-  <table width="100%" cellspacing="2" cellpadding="2" border="0" align="center">
-	<tr> 
-	  <td align="left" valign="middle">{POST_PM_IMG}</td>
-	  <td align="left" width="100%">&nbsp;<span class="nav"><a href="{U_INDEX}" class="nav">{L_INDEX}</a></span></td>
-	  <td align="right" nowrap="nowrap"><span class="gensmall">{L_DISPLAY_MESSAGES}: 
-		<select name="msgdays">{S_SELECT_MSG_DAYS}
-		</select>
-		<input type="submit" value="{L_GO}" name="submit_msgdays" class="liteoption" />
-		</span></td>
-	</tr>
-  </table>
-
-  <table border="0" cellpadding="3" cellspacing="1" width="100%" class="forumline">
-	<tr> 
-	  <th width="5%" height="25" class="thCornerL" nowrap="nowrap">&nbsp;{L_FLAG}&nbsp;</th>
-	  <th width="55%" class="thTop" nowrap="nowrap">&nbsp;{L_SUBJECT}&nbsp;</th>
-	  <th width="20%" class="thTop" nowrap="nowrap">&nbsp;{L_FROM_OR_TO}&nbsp;</th>
-	  <th width="15%" class="thTop" nowrap="nowrap">&nbsp;{L_DATE}&nbsp;</th>
-	  <th width="5%" class="thCornerR" nowrap="nowrap">&nbsp;{L_MARK}&nbsp;</th>
-	</tr>
+  <form method="post" name="privmsg_list" action="{S_PRIVMSGS_ACTION}">
+  <div class="row mx-0">
+    <div class="col-3 nav py-1 mx-0 ml-0 nw text-left">{POST_PM}</div>
+    <div class="col pl-0 mb-0 pl-0 text-left nav"><a href="{U_INDEX}" class="nav">{L_INDEX}</a></div>
+    <div class="col-4 p-1 my-auto">
+      <span class="nav gensmall">{L_DISPLAY_MESSAGES}: <select name="msgdays">{S_SELECT_MSG_DAYS}</select><input type="submit" value="{L_GO}" name="submit_msgdays" class="liteoption" /></span>
+    </div>
+  </div>
+  <div class="container-fluid forumline mx-0">
+    <div class="row th"> 
+      <div class="col-1 pl-1 py-1 ctr thCornerL">{L_FLAG}</div>
+      <div class="col-6 p-0 py-1 thTop ml-0 text-left">{L_SUBJECT}</div>
+      <div class="col-2 p-0 py-1 ctr thTop">{L_FROM_OR_TO}</div>
+      <div class="col-2 p-0 py-1 ctr thTop">{L_DATE}</div>
+      <div class="col-1 p-0 py-1 ctr thCornerR">{L_MARK}</div>
+	</div>
 	<!-- BEGIN listrow -->
-	<tr> 
-	  <td class="{listrow.ROW_CLASS}" width="5%" align="center" valign="middle"><img src="{listrow.PRIVMSG_FOLDER_IMG}" width="19" height="18" alt="{listrow.L_PRIVMSG_FOLDER_ALT}" title="{listrow.L_PRIVMSG_FOLDER_ALT}" /></td>
-	  <td width="55%" valign="middle" class="{listrow.ROW_CLASS}"><span class="topictitle">&nbsp;<a href="{listrow.U_READ}" class="topictitle">{listrow.SUBJECT}</a></span></td>
-	  <td width="20%" valign="middle" align="center" class="{listrow.ROW_CLASS}"><span class="name">&nbsp;<a href="{listrow.U_FROM_USER_PROFILE}" class="name">{listrow.FROM}</a></span></td>
-	  <td width="15%" align="center" valign="middle" class="{listrow.ROW_CLASS}"><span class="postdetails">{listrow.DATE}</span></td>
-	  <td width="5%" align="center" valign="middle" class="{listrow.ROW_CLASS}"><span class="postdetails"> 
-		<input type="checkbox" name="mark[]2" value="{listrow.S_MARK_ID}" />
-		</span></td>
-	</tr>
+    <div class="row"> 
+      <div class="col-1 pl-1 py-1 ctr {listrow.ROW_CLASS}"><img src="{listrow.PRIVMSG_FOLDER_IMG}" width="19" height="18" alt="{listrow.L_PRIVMSG_FOLDER_ALT}" title="{listrow.L_PRIVMSG_FOLDER_ALT}" /></div>
+      <div class="col-6 p-0 py-1 ml-0 text-left {listrow.ROW_CLASS} topictitle"><a href="{listrow.U_READ}" class="topictitle">{listrow.SUBJECT}</a></div>
+      <div class="col-2 p-0 py-1 ctr {listrow.ROW_CLASS} name"><a href="{listrow.U_FROM_USER_PROFILE}" class="name">{listrow.FROM}</a></div>
+      <div class="col-2 p-0 py-1 ctr {listrow.ROW_CLASS} postdetails">{listrow.DATE}</div>
+      <div class="col-1 p-0 py-1 ctr {listrow.ROW_CLASS} postdetails"><input type="checkbox" name="mark[]2" value="{listrow.S_MARK_ID}" /></div>
+	</div>
 	<!-- END listrow -->
 	<!-- BEGIN switch_no_messages -->
-	<tr> 
-	  <td class="row1" colspan="5" align="center" valign="middle"><span class="gen">{L_NO_MESSAGES}</span></td>
-	</tr>
+    <div class="row"> 
+      <div class="col ctr gen">{L_NO_MESSAGES}</div>
+    </div>
 	<!-- END switch_no_messages -->
-	<tr> 
-	  <td class="catBottom" colspan="5" height="28" align="right"> {S_HIDDEN_FIELDS} 
-		<input type="submit" name="save" value="{L_SAVE_MARKED}" class="mainoption" />
-		&nbsp; 
-		<input type="submit" name="delete" value="{L_DELETE_MARKED}" class="liteoption" />
-		&nbsp; 
-		<input type="submit" name="deleteall" value="{L_DELETE_ALL}" class="liteoption" />
-	  </td>
-	</tr>
-  </table>
+    <div class="row catBottom">{S_HIDDEN_FIELDS} 
+      <div class="col pt-1 ctr"><input type="submit" name="save" value="{L_SAVE_MARKED}" class="mainoption" /></div>
+      <div class="col pt-1 ctr"><input type="submit" name="delete" value="{L_DELETE_MARKED}" class="liteoption" /></div>
+      <div class="col pt-1 ctr"><input type="submit" name="deleteall" value="{L_DELETE_ALL}" class="liteoption" /></div>
+	</div>
+  </div>
+  <div class="row mx-0 pb-2">
+    <div class="col-3 ml-0 nav py-1 nw float-left">{POST_PM}</div>
+    <div class="col text-left">
+      <span class="nav">{PAGE_NUMBER}</span>
+    </div>
+    <div class="col text-right">
+      <div class="row">
+        <div class="col">
+          <span class="gensmall font-weight-bold"><a href="javascript:select_switch(true);" class="gensmall">{L_MARK_ALL}</a> :: <a href="javascript:select_switch(false);" class="gensmall">{L_UNMARK_ALL}</a></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-right">
+          <span class="nav">{PAGINATION}</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-right">
+          <span class="gensmall">{S_TIMEZONE}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  </form>
 
-  <table width="100%" cellspacing="2" border="0" align="center" cellpadding="2">
-	<tr> 
-	  <td align="left" valign="middle"><span class="nav">{POST_PM_IMG}</span></td>
-	  <td align="left" valign="middle" width="100%"><span class="nav">{PAGE_NUMBER}</span></td>
-	  <td align="right" valign="top" nowrap="nowrap"><b><span class="gensmall"><a href="javascript:select_switch(true);" class="gensmall">{L_MARK_ALL}</a> :: <a href="javascript:select_switch(false);" class="gensmall">{L_UNMARK_ALL}</a></span></b><br /><span class="nav">{PAGINATION}<br /></span><span class="gensmall">{S_TIMEZONE}</span></td>
-	</tr>
-  </table>
-</form>
-
-<table width="100%" border="0">
-  <tr> 
-	<td align="right" valign="top">{JUMPBOX}</td>
-  </tr>
-</table>
+  <div class="container-fluid px-0">
+    <div class="row">
+      <div class="col gen px-0 text-right">{JUMPBOX}</div>
+    </div>
+  </div>

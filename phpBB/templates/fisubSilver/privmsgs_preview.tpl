@@ -1,27 +1,25 @@
- 
-<table border="0" cellpadding="4" cellspacing="1" width="100%" class="forumline">
-  <tr> 
-	<th height="25" class="thHead" colspan="2">{L_PREVIEW}</th>
-  </tr>
-  <tr> 
-	<td class="row2"><span class="genmed">{L_FROM}:</span></td>
-	<td width="100%" class="row2"><span class="genmed">{MESSAGE_FROM}</span></td>
-  </tr>
-  <tr> 
-	<td class="row2"><span class="genmed">{L_TO}:</span></td>
-	<td width="100%" class="row2"><span class="genmed">{MESSAGE_TO}</span></td>
-  </tr>
-  <tr> 
-	<td class="row2"><span class="genmed">{L_POSTED}:</span></td>
-	<td width="100%" class="row2"><span class="genmed">{POST_DATE}</span></td>
-  </tr>
-  <tr> 
-	<td class="row2"><span class="genmed">{L_SUBJECT}:</span></td>
-	<td width="100%" class="row2"><span class="genmed">{POST_SUBJECT}</span></td>
-  </tr>
-  <tr> 
-	<td valign="top" colspan="2" class="row1"><span class="postbody">{MESSAGE}</span></td>
-  </tr>
-</table>
-
-<br clear="all" />
+  <div class="container-fluid forumline">
+    <div class="row th">
+      <div class="col ctr">{L_PREVIEW}</div>
+    </div>
+    <div class="row genmed row2">
+      <div class="col-2">{L_FROM}:</div>
+      <div class="col">{MESSAGE_FROM}</div>
+    </div>
+    <div class="row genmed row2">
+      <div class="col-2">{L_TO}:</div>
+      <div class="col">{MESSAGE_TO}</div>
+    </div>
+    <div class="row genmed row2">
+      <div class="col-2">{L_POSTED}:</div>
+      <div class="col">{POST_DATE}</div>
+    </div>
+    <div class="row genmed row2">
+      <div class="col-2 pb-1">{L_SUBJECT}:</div>
+      <div class="col pb-1">{POST_SUBJECT}</div>
+    </div>
+    <div class="row row1 mt-1 py-1">
+      <div class="col postbody">{MESSAGE}</div>
+    </div>
+  </div>
+  <br clear="all" />

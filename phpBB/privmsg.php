@@ -118,16 +118,16 @@ $error = FALSE;
 //
 // Define the box image links
 //
-$inbox_img = ( $folder != 'inbox' || $mode != '' ) ? '<a href="' . append_sid("privmsg.$phpEx?folder=inbox") . '"><img src="' . $images['pm_inbox'] . '" border="0" alt="' . $lang['Inbox'] . '" /></a>' : '<img src="' . $images['pm_inbox'] . '" border="0" alt="' . $lang['Inbox'] . '" />';
+$inbox_img = ( $folder != 'inbox' || $mode != '' ) ? '<a class="fa fa-2x fa-file-o" aria-hidden="true" href="' . append_sid("privmsg.$phpEx?folder=inbox") . '"><img src="' . $images['pm_inbox'] . '" alt="' . $lang['Inbox'] . '" /></a>' : '<img src="' . $images['pm_inbox'] . '" alt="' . $lang['Inbox'] . '" />';
 $inbox_url = ( $folder != 'inbox' || $mode != '' ) ? '<a href="' . append_sid("privmsg.$phpEx?folder=inbox") . '">' . $lang['Inbox'] . '</a>' : $lang['Inbox'];
 
-$outbox_img = ( $folder != 'outbox' || $mode != '' ) ? '<a href="' . append_sid("privmsg.$phpEx?folder=outbox") . '"><img src="' . $images['pm_outbox'] . '" border="0" alt="' . $lang['Outbox'] . '" /></a>' : '<img src="' . $images['pm_outbox'] . '" border="0" alt="' . $lang['Outbox'] . '" />';
+$outbox_img = ( $folder != 'outbox' || $mode != '' ) ? '<a class="fa fa-2x fa-file-text-o" aria-hidden="true" href="' . append_sid("privmsg.$phpEx?folder=outbox") . '"><img src="' . $images['pm_outbox'] . '" alt="' . $lang['Outbox'] . '" /></a>' : '<img src="' . $images['pm_outbox'] . '" alt="' . $lang['Outbox'] . '" />';
 $outbox_url = ( $folder != 'outbox' || $mode != '' ) ? '<a href="' . append_sid("privmsg.$phpEx?folder=outbox") . '">' . $lang['Outbox'] . '</a>' : $lang['Outbox'];
 
-$sentbox_img = ( $folder != 'sentbox' || $mode != '' ) ? '<a href="' . append_sid("privmsg.$phpEx?folder=sentbox") . '"><img src="' . $images['pm_sentbox'] . '" border="0" alt="' . $lang['Sentbox'] . '" /></a>' : '<img src="' . $images['pm_sentbox'] . '" border="0" alt="' . $lang['Sentbox'] . '" />';
+$sentbox_img = ( $folder != 'sentbox' || $mode != '' ) ? '<a class="fa fa-2x fa-share-square-o" aria-hidden="true" href="' . append_sid("privmsg.$phpEx?folder=sentbox") . '"><img src="' . $images['pm_sentbox'] . '" alt="' . $lang['Sentbox'] . '" /></a>' : '<img src="' . $images['pm_sentbox'] . '" alt="' . $lang['Sentbox'] . '" />';
 $sentbox_url = ( $folder != 'sentbox' || $mode != '' ) ? '<a href="' . append_sid("privmsg.$phpEx?folder=sentbox") . '">' . $lang['Sentbox'] . '</a>' : $lang['Sentbox'];
 
-$savebox_img = ( $folder != 'savebox' || $mode != '' ) ? '<a href="' . append_sid("privmsg.$phpEx?folder=savebox") . '"><img src="' . $images['pm_savebox'] . '" border="0" alt="' . $lang['Savebox'] . '" /></a>' : '<img src="' . $images['pm_savebox'] . '" border="0" alt="' . $lang['Savebox'] . '" />';
+$savebox_img = ( $folder != 'savebox' || $mode != '' ) ? '<a class="fa fa-2x fa-save" aria-hidden="true" href="' . append_sid("privmsg.$phpEx?folder=savebox") . '"><img src="' . $images['pm_savebox'] . '" alt="' . $lang['Savebox'] . '" /></a>' : '<img src="' . $images['pm_savebox'] . '" alt="' . $lang['Savebox'] . '" />';
 $savebox_url = ( $folder != 'savebox' || $mode != '' ) ? '<a href="' . append_sid("privmsg.$phpEx?folder=savebox") . '">' . $lang['Savebox'] . '</a>' : $lang['Savebox'];
 
 // ----------
@@ -358,13 +358,13 @@ else if ( $mode == 'read' )
 		'edit' => append_sid("privmsg.$phpEx?mode=edit&amp;" . POST_POST_URL . "=$privmsg_id")
 	);
 	$post_icons = array(
-		'post_img' => '<a href="' . $post_urls['post'] . '"><img src="' . $images['pm_postmsg'] . '" alt="' . $lang['Post_new_pm'] . '" border="0" /></a>',
-		'post' => '<a href="' . $post_urls['post'] . '">' . $lang['Post_new_pm'] . '</a>',
-		'reply_img' => '<a href="' . $post_urls['reply'] . '"><img src="' . $images['pm_replymsg'] . '" alt="' . $lang['Post_reply_pm'] . '" border="0" /></a>',
-		'reply' => '<a href="' . $post_urls['reply'] . '">' . $lang['Post_reply_pm'] . '</a>',
-		'quote_img' => '<a href="' . $post_urls['quote'] . '"><img src="' . $images['pm_quotemsg'] . '" alt="' . $lang['Post_quote_pm'] . '" border="0" /></a>',
+		'post_img' => '<a href="' . $post_urls['post'] . '" title="' . $lang['Post_new_pm'] . '"><img src="' . $images['pm_postmsg'] . '" alt="' . $lang['Post_new_pm'] . '" /></a>',
+		'post' => '<a class="postbtn nav nw" href="' . $post_urls['post'] . '"><i class="fa fa-file-o mr-1" aria-hidden="true"></i>' . $lang['Post_new_pm'] . '</a>',
+		'reply_img' => '<a href="' . $post_urls['reply'] . '" title="' . $lang['Post_reply_pm'] . '"><img src="' . $images['pm_replymsg'] . '" alt="' . $lang['Post_reply_pm'] . '" /></a>',
+		'reply' => '<a class="postbtn nav nw"  href="' . $post_urls['reply'] . '"><i class="fa fa-file-text-o mr-1" aria-hidden="true"></i>' . $lang['Post_reply_pm'] . '</a>',
+		'quote_img' => '<a class="fa fa-commenting-o" aria-hidden="true" href="' . $post_urls['quote'] . '" title="' . $lang['Post_quote_pm'] . '"><img src="' . $images['pm_quotemsg'] . '" alt="' . $lang['Post_quote_pm'] . '" /></a>',
 		'quote' => '<a href="' . $post_urls['quote'] . '">' . $lang['Post_quote_pm'] . '</a>',
-		'edit_img' => '<a href="' . $post_urls['edit'] . '"><img src="' . $images['pm_editmsg'] . '" alt="' . $lang['Edit_pm'] . '" border="0" /></a>',
+		'edit_img' => '<a class="fa fa-pencil-square-o" aria-hidden="true" href="' . $post_urls['edit'] . '" title="' . $lang['Edit_pm'] . '"><img src="' . $images['pm_editmsg'] . '" alt="' . $lang['Edit_pm'] . '" /></a>',
 		'edit' => '<a href="' . $post_urls['edit'] . '">' . $lang['Edit_pm'] . '</a>'
 	);
 
@@ -500,18 +500,18 @@ else if ( $mode == 'read' )
 	$post_date = create_date($board_config['default_dateformat'], $privmsg['privmsgs_date'], $board_config['board_timezone']);
 
 	$temp_url = append_sid("profile.$phpEx?mode=viewprofile&amp;" . POST_USERS_URL . '=' . $user_id_from);
-	$profile_img = '<a href="' . $temp_url . '"><img src="' . $images['icon_profile'] . '" alt="' . $lang['Read_profile'] . '" title="' . $lang['Read_profile'] . '" border="0" /></a>';
+	$profile_img = '<a class="fa fa-user" aria-hidden="true" href="' . $temp_url . '" title="' . $lang['Read_profile'] . '"><img src="' . $images['icon_profile'] . '" alt="' . $lang['Read_profile'] . '" /></a>';
 	$profile = '<a href="' . $temp_url . '">' . $lang['Read_profile'] . '</a>';
 
 	$temp_url = append_sid("privmsg.$phpEx?mode=post&amp;" . POST_USERS_URL . "=$user_id_from");
-	$pm_img = '<a href="' . $temp_url . '"><img src="' . $images['icon_pm'] . '" alt="' . $lang['Send_private_message'] . '" title="' . $lang['Send_private_message'] . '" border="0" /></a>';
+	$pm_img = '<a class="fa fa-comments" aria-hidden="true" href="' . $temp_url . '" title="' . $lang['Send_private_message'] . '"><img src="' . $images['icon_pm'] . '" alt="' . $lang['Send_private_message'] . '" /></a>';
 	$pm = '<a href="' . $temp_url . '">' . $lang['Send_private_message'] . '</a>';
 
 	if ( !empty($privmsg['user_viewemail']) || $userdata['user_level'] == ADMIN )
 	{
 		$email_uri = ( $board_config['board_email_form'] ) ? append_sid("profile.$phpEx?mode=email&amp;" . POST_USERS_URL .'=' . $user_id_from) : 'mailto:' . $privmsg['user_email'];
 
-		$email_img = '<a href="' . $email_uri . '"><img src="' . $images['icon_email'] . '" alt="' . $lang['Send_email'] . '" title="' . $lang['Send_email'] . '" border="0" /></a>';
+		$email_img = '<a class="fa fa-envelope" aria-hidden="true" href="' . $email_uri . '" title="' . $lang['Send_email'] . '"><img src="' . $images['icon_email'] . '" alt="' . $lang['Send_email'] . '" /></a>';
 		$email = '<a href="' . $email_uri . '">' . $lang['Send_email'] . '</a>';
 	}
 	else
@@ -520,25 +520,25 @@ else if ( $mode == 'read' )
 		$email = '';
 	}
 
-	$www_img = ( $privmsg['user_website'] ) ? '<a href="' . $privmsg['user_website'] . '" target="_userwww"><img src="' . $images['icon_www'] . '" alt="' . $lang['Visit_website'] . '" title="' . $lang['Visit_website'] . '" border="0" /></a>' : '';
+	$www_img = ( $privmsg['user_website'] ) ? '<a href="' . $privmsg['user_website'] . '" target="_userwww"><img src="' . $images['icon_www'] . '" alt="' . $lang['Visit_website'] . '" title="' . $lang['Visit_website'] . '" /></a>' : '';
 	$www = ( $privmsg['user_website'] ) ? '<a href="' . $privmsg['user_website'] . '" target="_userwww">' . $lang['Visit_website'] . '</a>' : '';
 
 	$temp_url = append_sid("profile.$phpEx?mode=viewprofile&amp;" . POST_USERS_URL . "=$poster_id");
-	$fb_img = ( $privmsg[$i]['user_fb'] ) ? '<a class="fa fa-facebook-official" aria-hidden="true" href="https://www.facebook.com/' . $privmsg[$i]['user_fb'] . '" target="blank" title="' . $lang['FB'] . '"><img src="' . $images['icon_fb'] . '" alt="' . $lang['FB'] . '" /></a>' : ''; 
-	$fb = ( $privmsg[$i]['user_fb'] ) ? '<a href="https://www.facebook.com/' . $privmsg[$i]['user_fb'] . '" target="blank">' . $lang['FB'] . '</a>' : ''; 
+	$fb_img = ( $privmsg['user_fb'] ) ? '<a class="fa fa-facebook-official" aria-hidden="true" href="https://www.facebook.com/' . $privmsg['user_fb'] . '" target="blank" title="' . $lang['FB'] . '"><img src="' . $images['icon_fb'] . '" alt="' . $lang['FB'] . '" /></a>' : ''; 
+	$fb = ( $privmsg['user_fb'] ) ? '<a href="https://www.facebook.com/' . $privmsg['user_fb'] . '" target="blank">' . $lang['FB'] . '</a>' : ''; 
 		
-	$ig_img = ( $privmsg[$i]['user_ig'] ) ? '<a class="fa fa-instagram" aria-hidden="true" href="https://www.instagram.com/' . $privmsg[$i]['user_ig'] . '" target="blank" title="' . $lang['IG'] . '"><img src="' . $images['icon_ig'] . '" alt="' . $lang['IG'] . '" /></a>' : ''; 
-	$ig = ( $privmsg[$i]['user_ig'] ) ? '<a href="https://www.instagram.com/' . $privmsg[$i]['user_ig'] . '" target="blank">' . $lang['IG'] . '</a>' : ''; 
+	$ig_img = ( $privmsg['user_ig'] ) ? '<a class="fa fa-instagram" aria-hidden="true" href="https://www.instagram.com/' . $privmsg['user_ig'] . '" target="blank" title="' . $lang['IG'] . '"><img src="' . $images['icon_ig'] . '" alt="' . $lang['IG'] . '" /></a>' : ''; 
+	$ig = ( $privmsg['user_ig'] ) ? '<a href="https://www.instagram.com/' . $privmsg['user_ig'] . '" target="blank">' . $lang['IG'] . '</a>' : ''; 
 
-	$pt_img = ( $privmsg[$i]['user_pt'] ) ? '<a class="fa fa-pinterest-square" aria-hidden="true" href="https://www.pinterest.com/' . $privmsg[$i]['user_pt'] . '" target="blank" title="' . $lang['PT'] . '"><img src="' . $images['icon_pt'] . '" alt="' . $lang['PT'] . '" /></a>' : ''; 
-	$pt = ( $privmsg[$i]['user_pt'] ) ? '<a href="https://www.pinterest.com/' . $privmsg[$i]['user_pt'] . '" target="blank">' . $lang['PT'] . '</a>' : ''; 
+	$pt_img = ( $privmsg['user_pt'] ) ? '<a class="fa fa-pinterest-square" aria-hidden="true" href="https://www.pinterest.com/' . $privmsg['user_pt'] . '" target="blank" title="' . $lang['PT'] . '"><img src="' . $images['icon_pt'] . '" alt="' . $lang['PT'] . '" /></a>' : ''; 
+	$pt = ( $privmsg['user_pt'] ) ? '<a href="https://www.pinterest.com/' . $privmsg['user_pt'] . '" target="blank">' . $lang['PT'] . '</a>' : ''; 
 
-	$skp_img = ( $privmsg[$i]['user_skp'] ) ? '<a class="fa fa-skype" aria-hidden="true" href="skype:' . $privmsg[$i]['user_skp'] . '?call" title="' . $lang['SKP'] . '"><img src="' . $images['icon_skp'] . '" alt="' . $lang['SKP'] . '" /></a>' : ''; 
-	$skp = ( $privmsg[$i]['user_skp'] ) ? '<a href="skype:' . $privmsg[$i]['user_skp'] . '?call">' . $lang['SKP'] . '</a>' : ''; 
+	$skp_img = ( $privmsg['user_skp'] ) ? '<a class="fa fa-skype" aria-hidden="true" href="skype:' . $privmsg['user_skp'] . '?call" title="' . $lang['SKP'] . '"><img src="' . $images['icon_skp'] . '" alt="' . $lang['SKP'] . '" /></a>' : ''; 
+	$skp = ( $privmsg['user_skp'] ) ? '<a href="skype:' . $privmsg['user_skp'] . '?call">' . $lang['SKP'] . '</a>' : ''; 
 
 
 	$temp_url = append_sid("search.$phpEx?search_author=" . urlencode($username_from) . "&amp;showresults=posts");
-	$search_img = '<a href="' . $temp_url . '"><img src="' . $images['icon_search'] . '" alt="' . sprintf($lang['Search_user_posts'], $username_from) . '" title="' . sprintf($lang['Search_user_posts'], $username_from) . '" border="0" /></a>';
+	$search_img = '<a class="fa fa-search" aria-hidden="true" href="' . $temp_url . '" title="' . sprintf($lang['Search_user_posts'], $username_from) . '"><img src="' . $images['icon_search'] . '" alt="' . sprintf($lang['Search_user_posts'], $username_from) . '" /></a>';
 	$search = '<a href="' . $temp_url . '">' . sprintf($lang['Search_user_posts'], $username_from) . '</a>';
 
 	//
@@ -644,7 +644,7 @@ else if ( $mode == 'read' )
 		'FB' => $fb, 
 		'IG_IMG' => $ig_img,
 		'IG' => $ig,
-		'PT_IMG' => $msn_img,
+		'PT_IMG' => $pt_img,
 		'PT' => $pt,
 		'SKP_IMG' => $skp_img, 
 		'SKP' => $skp) 
@@ -1919,7 +1919,7 @@ obtain_word_list($orig_word, $replacement_word);
 //
 // New message
 //
-$post_new_mesg_url = '<a href="' . append_sid("privmsg.$phpEx?mode=post") . '"><img src="' . $images['post_new'] . '" alt="' . $lang['Send_a_new_message'] . '" border="0" /></a>';
+$post_new_mesg_url = '<a class="postbtn nav nw" href="' . append_sid("privmsg.$phpEx?mode=post") . '"><i class="fa fa-file-o mr-1" aria-hidden="true"></i><img src="' . $images['post_new'] . '" alt="' . $lang['Send_a_new_message'] . '" /></a>';
 
 //
 // General SQL to obtain messages
@@ -2056,8 +2056,8 @@ switch ( $folder )
 		break;
 }
 $post_pm = append_sid("privmsg.$phpEx?mode=post");
-$post_pm_img = '<a href="' . $post_pm . '"><img src="' . $images['pm_postmsg'] . '" alt="' . $lang['Post_new_pm'] . '" border="0" /></a>';
-$post_pm = '<a href="' . $post_pm . '">' . $lang['Post_new_pm'] . '</a>';
+$post_pm_img = '<a href="' . $post_pm . '" title="' . $lang['Post_new_pm'] . '"><img src="' . $images['pm_postmsg'] . '" alt="' . $lang['Post_new_pm'] . '" /></a>';
+$post_pm = '<a class="postbtn nav nw" href="' . $post_pm . '"><i class="fa fa-file-o" aria-hidden="true">&nbsp;</i>' . $lang['Post_new_pm'] . '</a>';
 
 //
 // Output data for inbox status
