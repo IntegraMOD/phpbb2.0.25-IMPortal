@@ -472,8 +472,8 @@ $lang['Unread_message'] = 'Mensaje no le&iacute;do';
 $lang['Read_message'] = 'Leer mensaje';
 
 $lang['Read_pm'] = 'Leer mensaje';
-$lang['Post_new_pm'] = 'Enviar mensaje';
-$lang['Post_reply_pm'] = 'Responder mensaje';
+$lang['Post_new_pm'] = 'Enviar<div class="bld">mensaje</div>';
+$lang['Post_reply_pm'] = Escribir<div class="bld">Respuesta</div>';
 $lang['Post_quote_pm'] = 'Citar mensaje';
 $lang['Edit_pm'] = 'Modificar mensaje';
 

@@ -465,8 +465,8 @@ $lang['Unread_message'] = 'Unread message';
 $lang['Read_message'] = 'Read message';
 
 $lang['Read_pm'] = 'Read message';
-$lang['Post_new_pm'] = 'Post message';
-$lang['Post_reply_pm'] = 'Reply to message';
+$lang['Post_new_pm'] = 'New<span class="bld hov">Message</span>';
+$lang['Post_reply_pm'] = 'Post<span class="bld hov">Reply</span>';
 $lang['Post_quote_pm'] = 'Quote message';
 $lang['Edit_pm'] = 'Edit message';
 
