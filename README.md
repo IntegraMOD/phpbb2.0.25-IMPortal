@@ -1,4 +1,4 @@
-# phpbb2.0.25
+# phpbb2.0.25/ IntergraMOD Portal
 
 Updated phpBB2.0.23 to 2.0.23
 
@@ -6,7 +6,7 @@ updated to run on php7x
 
 added mysqli support.. thank you Vendethiel 
 
-added IM Portal 1.3.0 (integramod.com)
+added IntergraMOD Portal 1.3.0 (integramod.com)
 
 added Categories hierarchy 2.0.5
 
