@@ -24,8 +24,6 @@ added support for fontawsome images
 
 added language buttons to remove the template/images/lang_ folder
 
-added mysqli support.. thank you Vendethiel 
-
 added our IM chmod script so users do not have to manually set file permissions
 
 
