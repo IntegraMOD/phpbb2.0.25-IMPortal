@@ -1,6 +1,6 @@
 # phpbb2.0.25/ IntergraMOD Portal
 
-Updated phpBB2.0.23 to 2.0.23
+Updated phpBB2.0.23 to 2.0.25
 
 updated to run on php7x
 
